@@ -30,7 +30,8 @@ twitter_username: jekyllrb
 github_username: jekyll
 
 # Build settings
-theme: minima
+# Remove minima regular theme and make my custom
+# theme: minima
 plugins:
   - jekyll-feed
 # Exclude from processing.
