@@ -1,0 +1,105 @@
+<p>The array is one of the most basic data structures in computer science. We assume that you have worked with arrays before, so you are aware that an array is simply a list of data elements. The array is versatile, and can serve as a useful tool in many different situations, but let’s just give one quick example.</p>
+<p><!--more Keep on reading!--></p>
+
+<!-- wp:paragraph {"fontSize":"huge"} -->
+<p class="has-huge-font-size"><p>The array is one of the most basic data structures in computer science. We assume that you have worked with arrays before, so you are aware that an array is simply a list of data elements. The array is versatile, and can serve as a useful tool in many different situations, but let’s just give one quick example.</p>
+<p><!--more Keep on reading!--></p></p>
+<!-- /wp:paragraph -->
+
+<!-- wp:list -->
+<ul><li><strong>Fast lookups</strong>. Retrieving the element at a given index takes&nbsp;<em>O</em>(1)&nbsp;time, regardless of the length of the array.</li><li><strong>Fast appends</strong>. Adding a new element at the end of the array takes&nbsp;<em>O</em>(1)&nbsp;time.</li></ul>
+<!-- /wp:list -->
+
+<!-- wp:heading {"level":3,"fontSize":"huge"} -->
+<h3 class="has-huge-font-size"><p>The array is one of the most basic data structures in computer science. We assume that you have worked with arrays before, so you are aware that an array is simply a list of data elements. The array is versatile, and can serve as a useful tool in many different situations, but let’s just give one quick example.</p>
+<p><!--more Keep on reading!--></p></h3>
+<!-- /wp:heading -->
+
+<!-- wp:list -->
+<ul><li><strong>Fixed size</strong>. You need to specify how many elements you're going to store in your array ahead of time. (Unless you're using a fancy dynamic array.)</li><li><strong>Costly inserts and deletes.</strong>&nbsp;You have to&nbsp;<a href="https://www.interviewcake.com/concept/cpp/array?course=fc1&amp;section=array-and-string-manipulation#inserting">"scoot over" the other elements to fill in or close gaps</a>, which takes worst-case&nbsp;O(n)</li></ul>
+<!-- /wp:list -->
+
+<!-- wp:paragraph -->
+<p><p>The array is one of the most basic data structures in computer science. We assume that you have worked with arrays before, so you are aware that an array is simply a list of data elements. The array is versatile, and can serve as a useful tool in many different situations, but let’s just give one quick example.</p>
+<p><!--more Keep on reading!--></p></p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p><p>The array is one of the most basic data structures in computer science. We assume that you have worked with arrays before, so you are aware that an array is simply a list of data elements. The array is versatile, and can serve as a useful tool in many different situations, but let’s just give one quick example.</p>
+<p><!--more Keep on reading!--></p></p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p><p>The array is one of the most basic data structures in computer science. We assume that you have worked with arrays before, so you are aware that an array is simply a list of data elements. The array is versatile, and can serve as a useful tool in many different situations, but let’s just give one quick example.</p>
+<p><!--more Keep on reading!--></p></p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p><p>The array is one of the most basic data structures in computer science. We assume that you have worked with arrays before, so you are aware that an array is simply a list of data elements. The array is versatile, and can serve as a useful tool in many different situations, but let’s just give one quick example.</p>
+<p><!--more Keep on reading!--></p></p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p><p>The array is one of the most basic data structures in computer science. We assume that you have worked with arrays before, so you are aware that an array is simply a list of data elements. The array is versatile, and can serve as a useful tool in many different situations, but let’s just give one quick example.</p>
+<p><!--more Keep on reading!--></p></p>
+<!-- /wp:paragraph -->
+
+<!-- wp:syntaxhighlighter/code {"language":"cpp","highlightLines":""} -->
+<pre class="wp-block-syntaxhighlighter-code">&lt;p>The array is one of the most basic data structures in computer science. We assume that you have worked with arrays before, so you are aware that an array is simply a list of data elements. The array is versatile, and can serve as a useful tool in many different situations, but let’s just give one quick example.&lt;/p>
+&lt;p>&lt;!--more Keep on reading!-->&lt;/p></pre>
+<!-- /wp:syntaxhighlighter/code -->
+
+<!-- wp:paragraph -->
+<p><p>The array is one of the most basic data structures in computer science. We assume that you have worked with arrays before, so you are aware that an array is simply a list of data elements. The array is versatile, and can serve as a useful tool in many different situations, but let’s just give one quick example.</p>
+<p><!--more Keep on reading!--></p></p>
+<!-- /wp:paragraph -->
+
+<!-- wp:syntaxhighlighter/code {"language":"cpp"} -->
+<pre class="wp-block-syntaxhighlighter-code">&lt;p>The array is one of the most basic data structures in computer science. We assume that you have worked with arrays before, so you are aware that an array is simply a list of data elements. The array is versatile, and can serve as a useful tool in many different situations, but let’s just give one quick example.&lt;/p>
+&lt;p>&lt;!--more Keep on reading!-->&lt;/p></pre>
+<!-- /wp:syntaxhighlighter/code -->
+
+<!-- wp:paragraph -->
+<p><p>The array is one of the most basic data structures in computer science. We assume that you have worked with arrays before, so you are aware that an array is simply a list of data elements. The array is versatile, and can serve as a useful tool in many different situations, but let’s just give one quick example.</p>
+<p><!--more Keep on reading!--></p></p>
+<!-- /wp:paragraph -->
+
+<!-- wp:syntaxhighlighter/code {"language":"cpp"} -->
+<pre class="wp-block-syntaxhighlighter-code">&lt;p>The array is one of the most basic data structures in computer science. We assume that you have worked with arrays before, so you are aware that an array is simply a list of data elements. The array is versatile, and can serve as a useful tool in many different situations, but let’s just give one quick example.&lt;/p>
+&lt;p>&lt;!--more Keep on reading!-->&lt;/p></pre>
+<!-- /wp:syntaxhighlighter/code -->
+
+<!-- wp:paragraph -->
+<p><p>The array is one of the most basic data structures in computer science. We assume that you have worked with arrays before, so you are aware that an array is simply a list of data elements. The array is versatile, and can serve as a useful tool in many different situations, but let’s just give one quick example.</p>
+<p><!--more Keep on reading!--></p></p>
+<!-- /wp:paragraph -->
+
+<!-- wp:syntaxhighlighter/code {"language":"cpp"} -->
+<pre class="wp-block-syntaxhighlighter-code">&lt;p>The array is one of the most basic data structures in computer science. We assume that you have worked with arrays before, so you are aware that an array is simply a list of data elements. The array is versatile, and can serve as a useful tool in many different situations, but let’s just give one quick example.&lt;/p>
+&lt;p>&lt;!--more Keep on reading!-->&lt;/p></pre>
+<!-- /wp:syntaxhighlighter/code -->
+
+<!-- wp:paragraph -->
+<p><p>The array is one of the most basic data structures in computer science. We assume that you have worked with arrays before, so you are aware that an array is simply a list of data elements. The array is versatile, and can serve as a useful tool in many different situations, but let’s just give one quick example.</p>
+<p><!--more Keep on reading!--></p></p>
+<!-- /wp:paragraph -->
+
+<!-- wp:syntaxhighlighter/code {"language":"cpp"} -->
+<pre class="wp-block-syntaxhighlighter-code">&lt;p>The array is one of the most basic data structures in computer science. We assume that you have worked with arrays before, so you are aware that an array is simply a list of data elements. The array is versatile, and can serve as a useful tool in many different situations, but let’s just give one quick example.&lt;/p>
+&lt;p>&lt;!--more Keep on reading!-->&lt;/p></pre>
+<!-- /wp:syntaxhighlighter/code -->
+
+<!-- wp:paragraph -->
+<p><p>The array is one of the most basic data structures in computer science. We assume that you have worked with arrays before, so you are aware that an array is simply a list of data elements. The array is versatile, and can serve as a useful tool in many different situations, but let’s just give one quick example.</p>
+<p><!--more Keep on reading!--></p></p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p><p>The array is one of the most basic data structures in computer science. We assume that you have worked with arrays before, so you are aware that an array is simply a list of data elements. The array is versatile, and can serve as a useful tool in many different situations, but let’s just give one quick example.</p>
+<p><!--more Keep on reading!--></p></p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p><p>The array is one of the most basic data structures in computer science. We assume that you have worked with arrays before, so you are aware that an array is simply a list of data elements. The array is versatile, and can serve as a useful tool in many different situations, but let’s just give one quick example.</p>
+<p><!--more Keep on reading!--></p></p>
+<!-- /wp:paragraph -->

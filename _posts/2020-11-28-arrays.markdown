@@ -1,0 +1,19 @@
+<!-- wp:paragraph -->
+<p>One of the key differences is that arrays have indices, while lists do not.<br>To understand this, it helps to know how arrays are stored in memory. When an array is created, it is always given some initial size - that is, the number of elements it should be able to hold (and how large each element is). The computer then finds a block of memory and sets aside the space for the array.<br>Importantly, the space that gets set aside is one, continuous block. That is, all of the elements of the array are contiguous, meaning that they are all next to one another in memory.<br>Another key characteristic of an array is that all of the elements are the same size.<br>When we represent an array visually, we often draw it as a series of boxes that are all of the same size and all right next to one another:</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:image {"align":"center","id":154,"sizeSlug":"large"} -->
+<div class="wp-block-image"><figure class="aligncenter size-large"><img src="https://www.michaljanczyk.com/wp-content/uploads/2020/10/arr.png" alt="" class="wp-image-154"/><figcaption>An empty array of ten elements, depicted as a series of boxes.</figcaption></figure></div>
+<!-- /wp:image -->
+
+<!-- wp:paragraph -->
+<p>Because all of the elements are:</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:list -->
+<ul><li>next to one another and</li><li>the same size, this means that if we know the location of the first element, we can calculate the location of any other element.</li></ul>
+<!-- /wp:list -->
+
+<!-- wp:paragraph -->
+<p>For example, if the first element in the array is at memory location <code>00</code> and the elements are <code>24 bytes</code>, then the next element would be at location <code>00 + 24 = 24</code>. And the one after that would be at <code>24 + 24 = 48</code>, and so on.<br>Since we can easily calculate the location of any item in the array, we can assign each item an index and use that index for quickly and directly access the item.</p>
+<!-- /wp:paragraph -->

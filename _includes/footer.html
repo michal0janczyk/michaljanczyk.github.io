@@ -3,16 +3,16 @@
 
   <div class="wrapper">
 
-    <h2 class="footer-heading">{{ site.title | escape }}</h2>
+    <!-- <h2 class="footer-heading">{{ site.title | escape }}</h2> -->
 
     <div class="footer-col-wrapper">
       <div class="footer-col footer-col-1">
         <ul class="contact-list">
           <li class="p-name">
-            {%- if site.author -%}
-              {{ site.author | escape }}
+            {%- if site.copyright -%}
+              <li>&copy; {{ site.copyright }} {{ now | date: "%Y" }}</li>
             {%- else -%}
-              {{ site.title | escape }}
+              <!-- {{ site.title | escape }} -->
             {%- endif -%}
             </li>
             {%- if site.email -%}
@@ -22,12 +22,15 @@
       </div>
 
       <div class="footer-col footer-col-2">
-        {%- include social.html -%}
+        <!-- {%- include social.html -%} -->
       </div>
 
       <div class="footer-col footer-col-3">
-        <p>{{- site.description | escape -}}</p>
+        {%- include social.html -%}
+        <!-- <p>{{- site.description | escape -}}</p> -->
       </div>
+
+
     </div>
 
   </div>
