@@ -25,7 +25,8 @@ description: >- # this means to ignore newlines until "baseurl:"
   line in _config.yml. It will appear in your document head meta (for
   Google search results) and in your feed.xml site description.
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "https://michal0janczyk.github.io" # the base hostname & protocol for your site, e.g. http://example.com
+# url: "https://michal0janczyk.github.io" # the base hostname & protocol for your site, e.g. http://example.com
+url: "https://www.michaljanczyk.com"
 twitter_username: michal0janczyk
 github_username: michal0janczyk
 
@@ -40,17 +41,30 @@ copyright: "michal janczyk"
 
 markdown: kramdown
 
+# Code
 kramdown:
   input: GFM
   syntax_highlighter: rouge
 
+# Excerpts
+# Another obvious difference was the lack of an excerpt under each post title.
+# Both WordPress and Jekyll support automatic excerpts of the post text, or
+# an explicit chunk of text defined in your post’s metadata.
 show_excerpts: true
+excerpt_separator: <!--end_excerpt-->
+
+# Pagination
+pagination:
+  enabled: false
+paginate: 5
+paginate_path: "/page/:num/"
 
 # Build settings
 # Remove minima regular theme and make my custom
 # theme: minima
 plugins:
   - jekyll-feed
+  - jekyll-paginate
 # Exclude from processing.
 # The following items will not be processed, by default.
 # Any item listed under the `exclude:` key here will be automatically added to
