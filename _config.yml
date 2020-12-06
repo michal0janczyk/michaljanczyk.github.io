@@ -54,9 +54,7 @@ show_excerpts: true
 excerpt_separator: <!--end_excerpt-->
 
 # Pagination
-pagination:
-  enabled: false
-paginate: 5
+paginate: 2
 paginate_path: "/page/:num/"
 
 # Build settings
