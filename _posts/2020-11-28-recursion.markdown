@@ -5,7 +5,8 @@ date:   2020-11-27 19:44:15 +0100
 categories: Algoritm
 ---
 
-Recursion... A recursive function occurs when a function that calls itself until a "base condition" is true, and execution stops.
+Recursion...A recursive function occurs when a function that calls itself until a "base condition" is true, and execution stops.
+
 
 Everyone knows it, no one uses it. I'm just kidding. Writing this post I was trying to remind myself when it was the last time I used it.
 Two scenarios come to my mind. Both come from the times when I used to work for Ericsson. The first time was in my internship. My two friends and I were responsible for writing an automatic plate recognition system the supposed to be working internally on our parking lot. "It supposed to work" - that is a good statement. We used the recursion attitude for searching plates and matching the letters which ware found on the picture from CCTV. OMFG, you can't even imagine how slow it was. When we ware tried to run this on Raspberry Pi it crashes immediately. You how it is the first pancake is always spoiled. The second attempt was a little bit better because it was the self-healing system software framework for eNodeB or something like that.

@@ -14,13 +14,14 @@ pagination:
       {%- for post in paginator.posts -%}
 
       <li>
-        {%- assign date_format = site.minima.date_format | default: "%B %-d, %Y" -%}
-        <span class="post-meta">{{ post.date | date: date_format }}</span>
-        <h2 class="post-title">
+
+        <h2 class="post-title" style='margin-bottom:0px;' >
           <a class="post-link" href="{{ post.url | relative_url }}">
             {{ post.title | escape }}
           </a>
         </h2>
+         {%- assign date_format = site.minima.date_format | default: "%B %-d, %Y" -%}
+        <span class="post-meta">{{ post.date | date: date_format }}</span>
         <div class="post-summary">
           {%- if site.show_excerpts -%}
             {{ post.excerpt | strip_html | truncatewords:50 }}

@@ -156,7 +156,8 @@ a:focus {
 
 a:hover,
 a:active {
-    /* Improves readability when focused and also mouse hovered in all browsers people.opera.com/patrickl/experiments/keyboard/test */
+    /* Improves readability when focused and also mouse hovered in all browsers
+    people.opera.com/patrickl/experiments/keyboard/test */
     outline: 0;
 }
 
@@ -167,7 +168,6 @@ a img {
 
 /* =Global
 ----------------------------------------------- */
-
 body,
 button,
 input,
@@ -187,7 +187,7 @@ h4,
 h5,
 h6 {
     clear: both;
-    line-height: 1.2;
+    line-height: 10.2;
     margin-top: 0;
     font-family: Arial, Helvetica, sans-serif;
     font-weight: 700;
@@ -198,7 +198,7 @@ body {
 }
 
 .container {
-    width: 85%;
+    width: 805%;
     max-width: 700px;
     margin: auto;
 }
@@ -313,7 +313,7 @@ h6 {
 }
 
 .post-header {
-    margin-top: 1.4em;
+    margin-top: 0.5em;
 }
 
 .post-summary {
@@ -349,7 +349,7 @@ hr {
 
 /* Text elements */
 p {
-    margin-bottom: 1.5em;
+    margin-bottom: 0.5em;
 }
 
 ul,

@@ -42,9 +42,9 @@ copyright: "michal janczyk"
 markdown: kramdown
 
 # Code
+highlighter: rouge
 kramdown:
   input: GFM
-  syntax_highlighter: rouge
 
 # Excerpts
 # Another obvious difference was the lack of an excerpt under each post title.
@@ -54,7 +54,7 @@ show_excerpts: true
 excerpt_separator: <!--end_excerpt-->
 
 # Pagination
-paginate: 2
+paginate: 5
 paginate_path: "/page/:num/"
 
 # Build settings
