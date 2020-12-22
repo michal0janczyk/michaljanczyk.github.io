@@ -37,7 +37,7 @@
 
 .site-nav {
   float: right;
-  line-height: $base-line-height * $base-font-size * 2.25;
+  line-height: $base-line-height * $base-font-size * 2.5;
 
   .nav-trigger {
       display: none;
@@ -48,8 +48,9 @@
   }
 
   .page-link {
-    color: $text-color;
+    color: $grey-color;
     line-height: $base-line-height;
+    font-size: $base-font-size * 1.2;
 
     // Gaps between nav items, but not on the last one
     &:not(:last-child) {
@@ -228,9 +229,10 @@
 }
 
 .post-title {
-  @include relative-font-size(2.625);
+  @include relative-font-size(2.0);
   letter-spacing: -1px;
   line-height: 1;
+  // color: $brand-color;
 
   @include media-query($on-laptop) {
     @include relative-font-size(2.25);
