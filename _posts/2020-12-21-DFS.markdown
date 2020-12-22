@@ -1,0 +1,9 @@
+---
+layout: post
+title:  "DFS"
+date:   2020-12-21 19:44:15 +0100
+categories: Algoritm
+---
+Today we will deal with the methods of traversing a tree, i.e. visiting all its nodes in a strictly defined order. For general trees, there are two methods of visiting **Pre-Order** and **Post-Order**, for binary trees (where a node can have a maximum of two children) there is also the **In-Order** 
+method.
+

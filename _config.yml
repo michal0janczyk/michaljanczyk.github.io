@@ -39,12 +39,24 @@ linkedin_username: michal-janczyk
 copyright: "michal janczyk"
 # title-logo: /images/m_janczyk.jpg
 
-markdown: kramdown
+# markdown: kramdown
+highlighter: rouge
 
 # Code
-highlighter: rouge
+# Jekyll 3 now only supports Kramdown for Markdown
 kramdown:
+  # Use GitHub flavored markdown, including triple backtick fenced code blocks
   input: GFM
+  auto_ids: true
+  # Jekyll 3 and GitHub Pages now only support rouge for syntax highlighting
+  syntax_highlighter: rouge
+  syntax_highlighter_opts:
+    # Use existing pygments syntax highlighting css
+    css_class: "highlight"
+
+# Set the Sass partials directory, as we're using @imports
+sass:
+  style: :expanded # You might prefer to minify using :compressed
 
 # Excerpts
 # Another obvious difference was the lack of an excerpt under each post title.
