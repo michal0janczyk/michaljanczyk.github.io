@@ -4,6 +4,67 @@ title:  "DFS"
 date:   2020-12-21 19:44:15 +0100
 categories: Algoritm
 ---
-Today we will deal with the methods of traversing a tree, i.e. visiting all its nodes in a strictly defined order. For general trees, there are two methods of visiting **Pre-Order** and **Post-Order**, for binary trees (where a node can have a maximum of two children) there is also the **In-Order** 
-method.
+Traversing a tree, is a method of visiting all its nodes in a strictly defined order. 
+For general trees, there are two methods of visiting **Pre-Order** and **Post-Order**, 
+for binary trees (where a node can have a maximum of two children) there is also the 
+**In-Order** method. Take a look at full implementation of **[DFS][dfs-imp]**.
 
+The **Pre-Order** method visits nodes in the following order:
+* first root,
+* then left subtree until we reach None
+* next righ subtree until we reach None
+{% highlight python %}
+def pre_order(tree):
+    visit_order = list()
+    def traverse(node):
+        if node:
+            # visit the node
+            visit_order.append(node.get_value())
+            # traverse left subtree
+            traverse(node.get_left_child())
+            # traverse right subtree
+            traverse(node.get_right_child())
+    traverse(tree.get_root())
+    return visit_order
+{% endhighlight %}
+
+Traversing with **In-Order**:
+* first traverse the left subtree until we reach None
+* then visit back to the node(root)
+* next traverse the right subtree until we reach None
+{% highlight python %}
+def in_order(tree):
+    visit_order = list()
+    def traverse(node):
+        if node:
+            # traverse left subtree
+            traverse(node.get_left_child())
+            # visit node
+            visit_order.append(node.get_value())
+            # traverse right sub-tree
+            traverse(node.get_right_child())
+    traverse(tree.get_root())
+    return visit_order
+{% endhighlight %}
+
+The **Post-Order** Method:
+* traverse left subtree
+* then right subtree
+* then visit the node.
+{% highlight python %}
+def post_order(tree):
+    visit_order = list()
+    def traverse(node):
+        if node:
+            # traverse left subtree
+            traverse(node.get_left_child())
+            # traverse right subtree
+            traverse(node.get_right_child())
+            # visit node
+            visit_order.append(node.get_value())
+    traverse(tree.get_root())
+    return visit_order
+{% endhighlight %}
+
+  
+[dfs-imp]: https://github.com/michal0janczyk/udacity_data_structures_and_algorithms_nanodegree/blob/main/Data%20Structures/Trees/02%20traverse_a_tree_dfs_solution.ipynb
