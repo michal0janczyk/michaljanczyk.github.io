@@ -4,15 +4,6 @@ title:  "Singly Linked Lists"
 date:   2020-11-27 19:44:15 +0100
 categories: Data Structure
 ---
-### Arrays vs. Linked Lists
-
-
-| Operation                                                                     | Arrays | Linked List |
-|-------------------------------------------------------------------------------|--------|-------------|
-| Insertion/Deletion at the beginning of the array or linked list given a value | O(n)   | O(1)        |
-| Access Element                                                                | O(1)   | O(n)        |
-| Contiguous Memory                                                             | Yes    | No          |
-
 # Theory
 
 We can distinguished three different types of linked lists:
@@ -28,6 +19,16 @@ A linked list is a data structure that represents a list of items, just like an 
 In fact, in any application in which you’re using an array, you could probably use a linked list instead. Under the hood, however, linked lists are implemented differently and can have different performance in varying situations.
 
 Linked lists, on the other hand, do not consist of a bunch of memory cells in a row. Instead, they consist of a bunch of memory cells that are not next to each other, but can be spread across many different cells across the computer’s memory. These cells that are not adjacent to each other are known as nodes.
+
+### Arrays vs. Linked Lists
+
+
+| Operation                                                                     | Arrays | Linked List |
+|-------------------------------------------------------------------------------|--------|-------------|
+| Insertion/Deletion at the beginning of the array or linked list given a value | O(n)   | O(1)        |
+| Access Element                                                                | O(1)   | O(n)        |
+| Contiguous Memory                                                             | Yes    | No          |
+
 
 ## Structure
 
