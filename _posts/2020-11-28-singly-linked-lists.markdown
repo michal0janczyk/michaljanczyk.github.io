@@ -6,11 +6,13 @@ categories: Data Structure
 ---
 ### Arrays vs. Linked Lists
 
+
 | Operation                                                                     | Arrays | Linked List |
 |-------------------------------------------------------------------------------|--------|-------------|
 | Insertion/Deletion at the beginning of the array or linked list given a value | O(n)   | O(1)        |
 | Access Element                                                                | O(1)   | O(n)        |
 | Contiguous Memory                                                             | Yes    | No          |
+
 # Theory
 
 We can distinguished three different types of linked lists:
