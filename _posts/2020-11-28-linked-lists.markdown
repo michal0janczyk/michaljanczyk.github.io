@@ -25,9 +25,14 @@ The ***next*** component in every node is a pointer that points from one node 
 
 The start of the linked list is referred to as the head. head is a pointer that points to the beginning of the linked list, so if we want to traverse the linked list to obtain or access an element of the linked list, we’ll start from head and move along.
 
-The last component of a singly linked list is a notion of null.
+### Arrays vs. Linked Lists
 
-[Arrays vs. Linked Lists](https://www.notion.so/ffd75ca90f5d45c6853fd941a40d7771)
+The last component of a singly linked list is a notion of null.
+| Operation                                                                     | Arrays | Linked List |
+|-------------------------------------------------------------------------------|--------|-------------|
+| Insertion/Deletion at the beginning of the array or linked list given a value | O(n)   | O(1)        |
+| Access Element                                                                | O(1)   | O(n)        |
+| Contiguous Memory                                                             | Yes    | No          |
 
 ## Insertion/Deletion
 
@@ -72,7 +77,7 @@ class LinkedList:
 
 We can distinguish three types of inserts:
 
-### `append`
+### append
 
 This method will insert an element at the end of the linked list.
 
@@ -88,7 +93,7 @@ def append(self, data):
     last_node.next = new_node
 ```
 
-### `prepend`
+### prepend
 
 This method will insert an element at the beginning of the linked list.
 
@@ -100,7 +105,7 @@ def prepend(self, data):
     self.head = new_node
 ```
 
-### `insert_after_node`
+### insert_after_node
 
 The last insertion method that we want to consider in this lesson is inserting an element after a given node.
 
@@ -117,7 +122,7 @@ def insert_after_node(self, prev_node, data):
 
 ## Deletion
 
-### `by_value`
+### by_value
 
 To delete a node by its value, we’ll first find the node to be deleted by traversing the linked list. Then, we’ll delete that node and update the rest of the pointers.
 
@@ -143,7 +148,7 @@ def delete_node(self, key):
         cur_node = None
 ```
 
-### `by_position`
+### by_position
 
 The overall logic will stay the same as in the previous lesson except that we’ll change the code a bit to cater to position rather than a key.
 
@@ -173,7 +178,7 @@ def delete_node_at_pos(self, pos):
 
 ## Length
 
-### `len_iterative`
+### len_iterative
 
 Let’s look at a linked list and recall how we managed to print out the elements of a linked list. We iterate through every element of the linked list. We start from the head node and while we don’t reach None, we print the data field of the node that we point to and increment the while loop by setting the current node equal to the next node.
 
@@ -187,7 +192,7 @@ def len_iterative(self):
     return count
 ```
 
-### `len_recursive`
+### len_recursive
 
 ```python
 def len_recursive(self, node):
@@ -238,7 +243,7 @@ def swap_nodes(self, key_1, key_2):
 
 ## Reverse
 
-### `reverse_iterative`
+### reverse_iterative
 
 ```python
 def reverse_iterative(self):
@@ -252,7 +257,7 @@ def reverse_iterative(self):
   self.head = prev
 ```
 
-### `reverse_recursive`
+### reverse_recursive
 
 ```python
 def reverse_recursive(self):
@@ -329,6 +334,7 @@ def remove_duplicates(self):
       prev = cur
     cur = prev.next
 ```
+
 
 Additional materials:
 * **[Udacity Linked List Exercises][udacity-liked-list]**
