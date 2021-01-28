@@ -27,12 +27,18 @@ The start of the linked list is referred to as the head. head is a pointer that 
 
 ### Arrays vs. Linked Lists
 
-The last component of a singly linked list is a notion of null.
 | Operation                                                                     | Arrays | Linked List |
 |-------------------------------------------------------------------------------|--------|-------------|
 | Insertion/Deletion at the beginning of the array or linked list given a value | O(n)   | O(1)        |
 | Access Element                                                                | O(1)   | O(n)        |
 | Contiguous Memory                                                             | Yes    | No          |
+
+
+| Tables        | Are           | Cool  |
+| ------------- |:-------------:| -----:|
+| col 3 is      | right-aligned | $1600 |
+| col 2 is      | centered      |   $12 |
+| zebra stripes | are neat      |    $1 |
 
 ## Insertion/Deletion
 
