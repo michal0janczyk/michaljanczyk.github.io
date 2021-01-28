@@ -41,7 +41,7 @@ Since we can easily calculate the location of any item in the array, we can assi
 <tbody>
   <tr>
     <td class="tg-0pky">Remove Even Integers from List</td>
-    <td class="tg-0pky">Naive method check if it is not even - modulo. If it is odd, the element is appended to a new list.  List comprehension</td>
+    <td class="tg-0pky">Naive method check if it is not even - modulo. If it is odd, the element is appended to a new list. List comprehension</td>
   </tr>
   <tr>
     <td class="tg-0pky">Merge Two Sorted Lists</td>
