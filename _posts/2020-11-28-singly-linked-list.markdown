@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Singly Linked Lists"
+title:  "Singly Linked List"
 date:   2020-11-27 19:44:15 +0100
 categories: Data Structure
 ---
