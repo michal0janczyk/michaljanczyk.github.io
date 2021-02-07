@@ -6,7 +6,7 @@ categories: Algoritm
 ---
 # Theory
 
-Take a look at full implementation of [Stack](https://github.com/michal0janczyk/interview_preparation/blob/master/Coding%20Challenges/Educative/Data%20Structures%20and%20Algorithms%20in%20Python/stack/stack.py)
+Take a look at full implementation of [Stack](https://github.com/michal0janczyk/interview_preparation/blob/master/Coding%20Challenges/Educative/Data%20Structures%20and%20Algorithms%20in%20Python/Stack/stack.py)
 
 Stack was implemented according to the principle: **LIFO = FILO**
 
@@ -97,8 +97,8 @@ Pile of books. If we want to retrieve a book from this stack, you can take the b
 class Stack():
     def __init__(self):
         self.items = []
-		
-	def size(self):
+
+    def size(self):
         return len(self.items)
 
     def push(self, item):
@@ -106,14 +106,14 @@ class Stack():
 
     def pop(self):
         return self.items.pop()
-    
+
     def is_empty(self):
         return self.items == []
-    
+
     def peek(self):
         if not self.is_empty():
             return self.items[-1]
-        
+
     def get_stack(self):
         return self.items
 ```
