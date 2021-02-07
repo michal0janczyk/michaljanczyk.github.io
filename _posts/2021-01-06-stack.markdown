@@ -98,7 +98,7 @@ class Stack():
     def __init__(self):
         self.items = []
 		
-		def size(self):
+	def size(self):
         return len(self.items)
 
     def push(self, item):
