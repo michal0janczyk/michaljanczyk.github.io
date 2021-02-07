@@ -4,6 +4,14 @@ title:  "Stack"
 date:   2021-02-07 19:44:15 +0100
 categories: Algoritm
 ---
+# Theory
+
+Take a look at full implementation of [Stack](https://github.com/michal0janczyk/interview_preparation/blob/master/Coding%20Challenges/Educative/Data%20Structures%20and%20Algorithms%20in%20Python/stack/stack.py)
+
+Stack was implemented according to the principle: **LIFO = FILO**
+
+Pile of books. If we want to retrieve a book from this stack, you can take the book on top. Taking a book from the bottom is a bit precarious and we don’t want to topple the entire stack. Therefore, we’ll take down the top book on the stack and read it or do whatever we want to do with it.
+
 |                    |          Grouping                                                    ||
 | Data Structure     | Average cases |           |           | Worst cases |        |        |
 |--------------------|---------------|-----------|-----------|-------------|--------|--------|
@@ -14,21 +22,14 @@ categories: Algoritm
 | Hash Table         | O(1)          | O(1)      | O(1)      | O(n)        | O(n)   | O(n)   |
 | Binary Search Tree | O(log(n))     | O(log(n)) | O(log(n)) | O(n)        | O(n)   | O(n)   |
 
-## Theory
 
-Take a look at full implementation of [Stack](https://github.com/michal0janczyk/interview_preparation/blob/master/Coding%20Challenges/Educative/Data%20Structures%20and%20Algorithms%20in%20Python/stack/stack.py)
-
-Stack was implemented according to the principle: **LIFO = FILO**
-
-Pile of books. If we want to retrieve a book from this stack, you can take the book on top. Taking a book from the bottom is a bit precarious and we don’t want to topple the entire stack. Therefore, we’ll take down the top book on the stack and read it or do whatever we want to do with it.
-
-## Stack Operations:
+# Stack Operations:
 
 - Push - The operation to insert elements in a stack is called push. Push adds the element in the last place, so the new element automatically becomes the top.
 - Pop - Popping is when we take the top book of the stack and put it down. Deletes the most recently added item.
 - Peek - “What’s the top element?” and it can give that to us using the peek operation. Note that the peek operation does not remove the top element, it merely returns it
 
-## Implementation
+# Implementation
 
 ```python
 class Stack():
@@ -57,7 +58,7 @@ class Stack():
 
 ## Exercise:
 
- **Determine if Brackets are Balanced**
+### Determine if Brackets are Balanced
 
 We’re going to determine whether or not a set of brackets are balanced or not by making use of the stack data structure.
 
