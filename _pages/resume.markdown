@@ -8,6 +8,9 @@ permalink: /resume/
 **@ OLX Group Dec 2018 – Present**
 
 I'm responsible for the design, build and continuously improve Global BI products based on varied database technologies (Redshift, MS SQL Server, MySQL, PostgreSQL and other), using leading cloud computing solutions on massive datasets.
+* Architected an end to end real time streaming data lake which delivery data to important internal stakeholders, top management and analytics team, size about 10TB processed data per month.
+* 
+* GDPR compliant data preparation
 * Monitoring clusters performance, analyze and optimize jobs, queries and data footprint
 * Delivering ad-hoc datasets as well as build stable data pipelines, set up monitoring
 * Unifying data sources and automate inventory and metadata collection

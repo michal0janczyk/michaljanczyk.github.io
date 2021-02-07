@@ -1,0 +1,166 @@
+---
+layout: post
+title:  "DFS"
+date:   2020-12-21 19:44:15 +0100
+categories: Algoritm
+---
+| Data Structure     | Average cases |           |           | Worst cases |        |        |
+|--------------------|---------------|-----------|-----------|-------------|--------|--------|
+|                    | Insert        | Delete    | Search    | Insert      | Delete | Search |
+| Array/Stack/Queue  | O(1)          | O(1)      | O(n)      | O(1)        | O(1)   | O(n)   |
+| Linked List        | O(1)          | O(1)      | O(n)      | O(1)        | O(1)   | O(n)   |
+| Doubly Linked List | O(1)          | O(1)      | O(n)      | O(1)        | O(1)   | O(n)   |
+| Hash Table         | O(1)          | O(1)      | O(1)      | O(n)        | O(n)   | O(n)   |
+| Binary Search Tree | O(log(n))     | O(log(n)) | O(log(n)) | O(n)        | O(n)   | O(n)   |
+
+# Theory
+
+Take a look at full implementation of [Stack](https://github.com/michal0janczyk/interview_preparation/blob/master/Coding%20Challenges/Educative/Data%20Structures%20and%20Algorithms%20in%20Python/stack/stack.py)
+
+Stack was implemented according to the principle: **LIFO = FILO**
+
+Pile of books. If we want to retrieve a book from this stack, you can take the book on top. Taking a book from the bottom is a bit precarious and we don’t want to topple the entire stack. Therefore, we’ll take down the top book on the stack and read it or do whatever we want to do with it.
+
+# Stack Operations:
+
+- Push - The operation to insert elements in a stack is called push. Push adds the element in the last place, so the new element automatically becomes the top.
+- Pop - Popping is when we take the top book of the stack and put it down. Deletes the most recently added item.
+- Peek - “What’s the top element?” and it can give that to us using the peek operation. Note that the peek operation does not remove the top element, it merely returns it
+
+# Implementation
+
+```python
+class Stack():
+    def __init__(self):
+        self.items = []
+		
+		def size(self):
+        return len(self.items)
+
+    def push(self, item):
+        self.items.append(item)				
+
+    def pop(self):
+        return self.items.pop()
+    
+    def is_empty(self):
+        return self.items == []
+    
+    def peek(self):
+        if not self.is_empty():
+            return self.items[-1]
+        
+    def get_stack(self):
+        return self.items
+```
+
+# Exercise:
+
+## **Determine if Brackets are Balanced**
+
+We’re going to determine whether or not a set of brackets are balanced or not by making use of the stack data structure.
+
+A balanced set off brackets is one where the number and type of opening and closing brackets match and that is also properly nested within the string of brackets.
+
+Examples of Balanced Brackets: ( ( { } ) )
+
+Examples of Unbalanced Brackets: [][][[] ]]]
+
+```python
+def equation_checker(equation):
+    stack = Stack()
+    for char in equation:
+        if char in "(":
+            stack.push(char)
+        elif char == ")":
+            if stack.pop() == None:
+                return False
+
+    if stack.size() == 0:
+        return True
+    else:
+        return False
+```
+
+```python
+def is_match(p1, p2):
+    if p1 == "(" and p2 == ")":
+        return True
+    elif p1 == "{" and p2 == "}":
+        return True
+    elif p1 == "[" and p2 == "]":
+        return True
+    else:
+        return False
+
+def is_paren_balanced(paren_string):
+    s = Stack()
+    is_balanced = True
+    index = 0
+
+    while index < len(paren_string) and is_balanced:
+        paren = paren_string[index]
+        if paren in "([{":
+            s.push(paren)
+        else:
+            if s.is_empty():
+                is_balanced = False
+            else:
+                top = s.pop()
+                if not is_match(top, paren):
+                    is_balanced = False
+        index += 1
+
+    if s.is_empty() and is_balanced:
+        return True
+    else:
+        return False
+```
+
+## **Reverse String**
+
+In pythonic way:
+
+```python
+input_str = "Educative"
+print(input_str[::-1])
+```
+
+Using stack. We push all the characters of the string onto the stack, and due to the First-In, Last-Out property of stack, we get all the characters in reverse order when we pop them off the stack.
+
+```python
+def reverse_string(input_str):
+    stack = Stack()
+    result = ""
+
+    for i in range(len(input_str)):
+        stack.push(input_str[i])
+
+    while not stack.is_empty():
+        result += stack.pop()
+    return result
+```
+
+## **Convert Decimal Integer to Binary**
+
+The following code helps us to evaluate whether our implementation is correct or not:
+
+```
+  print(int(convert_int_to_bin(56),2)==56)
+```
+
+In this problem, the First-In, Last-Out property of the stack has enabled us to store the binary bits from the MSB (Most Significant Bit) to the LSB (Least Significant Bit), although we get the values in reverse order by the division by 2 method.
+
+```python
+def convert_int_to_bin(dec_num):
+    stack = Stack()
+    while dec_num > 0:
+        remainder = dec_num % 2
+        stack.push(remainder)
+        dec_num = dec_num // 2
+
+    bin_num = ""
+    while not stack.is_empty():
+        bin_num += str(stack.pop())
+    return bin_num
+```

@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Strings"
+title:  "String"
 date:   2020-11-27 19:44:15 +0100
 categories: Algoritm
 ---
