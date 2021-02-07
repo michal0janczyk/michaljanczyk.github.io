@@ -12,9 +12,9 @@ Stack was implemented according to the principle: **LIFO = FILO**
 
 Pile of books. If we want to retrieve a book from this stack, you can take the book on top. Taking a book from the bottom is a bit precarious and we don’t want to topple the entire stack. Therefore, we’ll take down the top book on the stack and read it or do whatever we want to do with it.
 
-| Data Structure     | Average cases |           |           | Worst cases |                |
+|                    | Average cases |           |           | Worst cases |                 |
 |--------------------|---------------|-----------|-----------|-------------|--------|--------|
-|                    | Insert        | Delete    | Search    | Insert      | Delete | Search |
+| Data Structure     | Insert        | Delete    | Search    | Insert      | Delete | Search |
 | Array/Stack/Queue  | O(1)          | O(1)      | O(n)      | O(1)        | O(1)   | O(n)   |
 | Linked List        | O(1)          | O(1)      | O(n)      | O(1)        | O(1)   | O(n)   |
 | Doubly Linked List | O(1)          | O(1)      | O(n)      | O(1)        | O(1)   | O(n)   |
