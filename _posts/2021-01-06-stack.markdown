@@ -145,7 +145,7 @@ def equation_checker(equation):
     else:
         return False
 ```
-
+An advanced version that can differentiate between all corner cases like ((.
 ```python
 def is_match(p1, p2):
     if p1 == "(" and p2 == ")":
@@ -186,7 +186,7 @@ def is_paren_balanced(paren_string):
 In pythonic way:
 
 ```python
-input_str = "Educative"
+input_str = "Test"
 print(input_str[::-1])
 ```
 
