@@ -15,6 +15,7 @@ Pile of books. If we want to retrieve a book from this stack, you can take the b
 |                    | Average cases |           |           | Worst cases |                 |
 |--------------------|---------------|-----------|-----------|-------------|--------|--------|
 | Data Structure     | Insert        | Delete    | Search    | Insert      | Delete | Search |
+|--------------------|---------------|-----------|-----------|-------------|--------|--------|
 | Array/Stack/Queue  | O(1)          | O(1)      | O(n)      | O(1)        | O(1)   | O(n)   |
 | Linked List        | O(1)          | O(1)      | O(n)      | O(1)        | O(1)   | O(n)   |
 | Doubly Linked List | O(1)          | O(1)      | O(n)      | O(1)        | O(1)   | O(n)   |
