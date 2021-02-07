@@ -4,6 +4,7 @@ title:  "Stack"
 date:   2021-02-07 19:44:15 +0100
 categories: Algoritm
 ---
+|                    |          Grouping                                                    ||
 | Data Structure     | Average cases |           |           | Worst cases |        |        |
 |--------------------|---------------|-----------|-----------|-------------|--------|--------|
 |                    | Insert        | Delete    | Search    | Insert      | Delete | Search |
