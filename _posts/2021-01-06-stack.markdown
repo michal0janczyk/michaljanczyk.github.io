@@ -7,12 +7,10 @@ categories: Algoritm
 # Theory
 
 Take a look at full implementation of [Stack](https://github.com/michal0janczyk/interview_preparation/blob/master/Coding%20Challenges/Educative/Data%20Structures%20and%20Algorithms%20in%20Python/stack/stack.py)
-
 Stack was implemented according to the principle: **LIFO = FILO**
-
 Pile of books. If we want to retrieve a book from this stack, you can take the book on top. Taking a book from the bottom is a bit precarious and we don’t want to topple the entire stack. Therefore, we’ll take down the top book on the stack and read it or do whatever we want to do with it.
 
-| Data Structure     | Average cases                         | Worst cases                   |
+| Data Structure     | Average cases |           |           | Worst cases |        |        |
 |--------------------|---------------|-----------|-----------|-------------|--------|--------|
 |                    | Insert        | Delete    | Search    | Insert      | Delete | Search |
 | Array/Stack/Queue  | O(1)          | O(1)      | O(n)      | O(1)        | O(1)   | O(n)   |
@@ -21,8 +19,7 @@ Pile of books. If we want to retrieve a book from this stack, you can take the b
 | Hash Table         | O(1)          | O(1)      | O(1)      | O(n)        | O(n)   | O(n)   |
 | Binary Search Tree | O(log(n))     | O(log(n)) | O(log(n)) | O(n)        | O(n)   | O(n)   |
 
-
-# Stack Operations:
+# Stack Operations
 
 - Push - The operation to insert elements in a stack is called push. Push adds the element in the last place, so the new element automatically becomes the top.
 - Pop - Popping is when we take the top book of the stack and put it down. Deletes the most recently added item.
