@@ -120,7 +120,7 @@ class Stack():
 
 ## Exercise
 
-### Determine if Brackets are Balanced
+#### Determine if Brackets are Balanced
 
 We’re going to determine whether or not a set of brackets are balanced or not by making use of the stack data structure.
 
@@ -181,7 +181,7 @@ def is_paren_balanced(paren_string):
         return False
 ```
 
-**Reverse String**
+#### Reverse String
 
 In pythonic way:
 
@@ -205,7 +205,7 @@ def reverse_string(input_str):
     return result
 ```
 
-**Convert Decimal Integer to Binary**
+#### Convert Decimal Integer to Binary
 
 The following code helps us to evaluate whether our implementation is correct or not:
 
