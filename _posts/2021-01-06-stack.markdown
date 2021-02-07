@@ -19,15 +19,13 @@ Pile of books. If we want to retrieve a book from this stack, you can take the b
 .tg th{background-color:#f0f0f0;border-color:#ccc;border-style:solid;border-width:1px;color:#333;
   font-family:Arial, sans-serif;font-size:14px;font-weight:normal;overflow:hidden;padding:10px 5px;word-break:normal;}
 .tg .tg-c3ow{border-color:inherit;text-align:center;vertical-align:top}
-.tg .tg-7btt{border-color:inherit;font-weight:bold;text-align:center;vertical-align:top}
-.tg .tg-0pky{border-color:inherit;text-align:left;vertical-align:top}
 </style>
 <table class="tg">
 <thead>
   <tr>
-    <th class="tg-7btt" rowspan="2">Data Structure</th>
-    <th class="tg-7btt" colspan="3">Average cases</th>
-    <th class="tg-7btt" colspan="3">Worst cases</th>
+    <th class="tg-c3ow" rowspan="2">Data Structure</th>
+    <th class="tg-c3ow" colspan="3">Average cases</th>
+    <th class="tg-c3ow" colspan="3">Worst cases</th>
   </tr>
   <tr>
     <td class="tg-c3ow">Insert</td>
@@ -41,48 +39,48 @@ Pile of books. If we want to retrieve a book from this stack, you can take the b
 <tbody>
   <tr>
     <td class="tg-c3ow">Array/Stack/Queue</td>
-    <td class="tg-0pky">O(1)</td>
-    <td class="tg-0pky">O(1)</td>
-    <td class="tg-0pky">O(n)</td>
-    <td class="tg-0pky">O(1)</td>
-    <td class="tg-0pky">O(1)</td>
-    <td class="tg-0pky">O(n)</td>
+    <td class="tg-c3ow">O(1)</td>
+    <td class="tg-c3ow">O(1)</td>
+    <td class="tg-c3ow">O(n)</td>
+    <td class="tg-c3ow">O(1)</td>
+    <td class="tg-c3ow">O(1)</td>
+    <td class="tg-c3ow">O(n)</td>
   </tr>
   <tr>
     <td class="tg-c3ow">Linked List</td>
-    <td class="tg-0pky">O(1)</td>
-    <td class="tg-0pky">O(1)</td>
-    <td class="tg-0pky">O(n)</td>
-    <td class="tg-0pky">O(1)</td>
-    <td class="tg-0pky">O(1)</td>
-    <td class="tg-0pky">O(n)</td>
+    <td class="tg-c3ow">O(1)</td>
+    <td class="tg-c3ow">O(1)</td>
+    <td class="tg-c3ow">O(n)</td>
+    <td class="tg-c3ow">O(1)</td>
+    <td class="tg-c3ow">O(1)</td>
+    <td class="tg-c3ow">O(n)</td>
   </tr>
   <tr>
     <td class="tg-c3ow">Doubly Linked List</td>
-    <td class="tg-0pky">O(1)</td>
-    <td class="tg-0pky">O(1)</td>
-    <td class="tg-0pky">O(n)</td>
-    <td class="tg-0pky">O(1)</td>
-    <td class="tg-0pky">O(1)</td>
-    <td class="tg-0pky">O(n)</td>
+    <td class="tg-c3ow">O(1)</td>
+    <td class="tg-c3ow">O(1)</td>
+    <td class="tg-c3ow">O(n)</td>
+    <td class="tg-c3ow">O(1)</td>
+    <td class="tg-c3ow">O(1)</td>
+    <td class="tg-c3ow">O(n)</td>
   </tr>
   <tr>
     <td class="tg-c3ow">Hash Table</td>
-    <td class="tg-0pky">O(1)</td>
-    <td class="tg-0pky">O(1)</td>
-    <td class="tg-0pky">O(1)</td>
-    <td class="tg-0pky">O(n)</td>
-    <td class="tg-0pky">O(n)</td>
-    <td class="tg-0pky">O(n)</td>
+    <td class="tg-c3ow">O(1)</td>
+    <td class="tg-c3ow">O(1)</td>
+    <td class="tg-c3ow">O(1)</td>
+    <td class="tg-c3ow">O(n)</td>
+    <td class="tg-c3ow">O(n)</td>
+    <td class="tg-c3ow">O(n)</td>
   </tr>
   <tr>
     <td class="tg-c3ow">Binary Search Tree</td>
-    <td class="tg-0pky">O(log(n))</td>
-    <td class="tg-0pky">O(log(n))</td>
-    <td class="tg-0pky">O(log(n))</td>
-    <td class="tg-0pky">O(n)</td>
-    <td class="tg-0pky">O(n)</td>
-    <td class="tg-0pky">O(n)</td>
+    <td class="tg-c3ow">O(log(n))</td>
+    <td class="tg-c3ow">O(log(n))</td>
+    <td class="tg-c3ow">O(log(n))</td>
+    <td class="tg-c3ow">O(n)</td>
+    <td class="tg-c3ow">O(n)</td>
+    <td class="tg-c3ow">O(n)</td>
   </tr>
 </tbody>
 </table>
