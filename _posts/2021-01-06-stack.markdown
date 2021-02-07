@@ -12,16 +12,80 @@ Stack was implemented according to the principle: **LIFO = FILO**
 
 Pile of books. If we want to retrieve a book from this stack, you can take the book on top. Taking a book from the bottom is a bit precarious and we don’t want to topple the entire stack. Therefore, we’ll take down the top book on the stack and read it or do whatever we want to do with it.
 
-|                    | Average cases |           |           | Worst cases |                 |
-|--------------------|---------------|-----------|-----------|-------------|--------|--------|
-| Data Structure     | Insert        | Delete    | Search    | Insert      | Delete | Search |
-|--------------------|---------------|-----------|-----------|-------------|--------|--------|
-| Array/Stack/Queue  | O(1)          | O(1)      | O(n)      | O(1)        | O(1)   | O(n)   |
-| Linked List        | O(1)          | O(1)      | O(n)      | O(1)        | O(1)   | O(n)   |
-| Doubly Linked List | O(1)          | O(1)      | O(n)      | O(1)        | O(1)   | O(n)   |
-| Hash Table         | O(1)          | O(1)      | O(1)      | O(n)        | O(n)   | O(n)   |
-| Binary Search Tree | O(log(n))     | O(log(n)) | O(log(n)) | O(n)        | O(n)   | O(n)   |
-
+<style type="text/css">
+.tg  {border-collapse:collapse;border-color:#ccc;border-spacing:0;}
+.tg td{background-color:#fff;border-color:#ccc;border-style:solid;border-width:1px;color:#333;
+  font-family:Arial, sans-serif;font-size:14px;overflow:hidden;padding:10px 5px;word-break:normal;}
+.tg th{background-color:#f0f0f0;border-color:#ccc;border-style:solid;border-width:1px;color:#333;
+  font-family:Arial, sans-serif;font-size:14px;font-weight:normal;overflow:hidden;padding:10px 5px;word-break:normal;}
+.tg .tg-c3ow{border-color:inherit;text-align:center;vertical-align:top}
+.tg .tg-7btt{border-color:inherit;font-weight:bold;text-align:center;vertical-align:top}
+.tg .tg-0pky{border-color:inherit;text-align:left;vertical-align:top}
+</style>
+<table class="tg">
+<thead>
+  <tr>
+    <th class="tg-7btt" rowspan="2">Data Structure</th>
+    <th class="tg-7btt" colspan="3">Average cases</th>
+    <th class="tg-7btt" colspan="3">Worst cases</th>
+  </tr>
+  <tr>
+    <td class="tg-c3ow">Insert</td>
+    <td class="tg-c3ow">Delete</td>
+    <td class="tg-c3ow">Search</td>
+    <td class="tg-c3ow">Insert</td>
+    <td class="tg-c3ow">Delete</td>
+    <td class="tg-c3ow">Search</td>
+  </tr>
+</thead>
+<tbody>
+  <tr>
+    <td class="tg-c3ow">Array/Stack/Queue</td>
+    <td class="tg-0pky">O(1)</td>
+    <td class="tg-0pky">O(1)</td>
+    <td class="tg-0pky">O(n)</td>
+    <td class="tg-0pky">O(1)</td>
+    <td class="tg-0pky">O(1)</td>
+    <td class="tg-0pky">O(n)</td>
+  </tr>
+  <tr>
+    <td class="tg-c3ow">Linked List</td>
+    <td class="tg-0pky">O(1)</td>
+    <td class="tg-0pky">O(1)</td>
+    <td class="tg-0pky">O(n)</td>
+    <td class="tg-0pky">O(1)</td>
+    <td class="tg-0pky">O(1)</td>
+    <td class="tg-0pky">O(n)</td>
+  </tr>
+  <tr>
+    <td class="tg-c3ow">Doubly Linked List</td>
+    <td class="tg-0pky">O(1)</td>
+    <td class="tg-0pky">O(1)</td>
+    <td class="tg-0pky">O(n)</td>
+    <td class="tg-0pky">O(1)</td>
+    <td class="tg-0pky">O(1)</td>
+    <td class="tg-0pky">O(n)</td>
+  </tr>
+  <tr>
+    <td class="tg-c3ow">Hash Table</td>
+    <td class="tg-0pky">O(1)</td>
+    <td class="tg-0pky">O(1)</td>
+    <td class="tg-0pky">O(1)</td>
+    <td class="tg-0pky">O(n)</td>
+    <td class="tg-0pky">O(n)</td>
+    <td class="tg-0pky">O(n)</td>
+  </tr>
+  <tr>
+    <td class="tg-c3ow">Binary Search Tree</td>
+    <td class="tg-0pky">O(log(n))</td>
+    <td class="tg-0pky">O(log(n))</td>
+    <td class="tg-0pky">O(log(n))</td>
+    <td class="tg-0pky">O(n)</td>
+    <td class="tg-0pky">O(n)</td>
+    <td class="tg-0pky">O(n)</td>
+  </tr>
+</tbody>
+</table>
 
 # Stack Operations
 
