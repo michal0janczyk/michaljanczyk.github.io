@@ -11,7 +11,7 @@
           <li class="p-name">
             {%- if site.copyright -%}
               <li>&copy; {{ site.copyright }} {{ now | date: "%Y" }}</li>
-              <p>{{- site.description | escape -}}</p>
+              <li><p>{{- site.description | escape -}}</p></li>
             {%- else -%}
               <!-- {{ site.title | escape }} -->
             {%- endif -%}
