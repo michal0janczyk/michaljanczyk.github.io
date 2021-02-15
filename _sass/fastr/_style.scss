@@ -520,7 +520,8 @@ button:hover,
 input[type="button"]:hover,
 input[type="reset"]:hover,
 input[type="submit"]:hover {
-    color: #57A3E8;
+    // color: #57A3E8;
+    color: #d3869b;
 }
 
 button:focus,
@@ -531,12 +532,14 @@ button:active,
 input[type="button"]:active,
 input[type="reset"]:active,
 input[type="submit"]:active {
-    color: #57A3E8;
+    // color: #57A3E8;
+    color: #d3869b;
 }
 
 input[type="checkbox"],
 input[type="radio"] {
-    color: #57A3E8;
+    // color: #57A3E8;
+    color: #d3869b;
 }
 
 input[type="search"] {
@@ -600,7 +603,8 @@ textarea {
 
 /* Links */
 a {
-    color: #57A3E8;
+    // color: #57A3E8; // blue
+    color: #d3869b;
 }
 
 a:visited {
@@ -610,7 +614,8 @@ a:visited {
 a:hover,
 a:focus,
 a:active {
-    color: #57A3E8;
+    // color: #57A3E8;
+    color: #d3869b;
 }
 
 a.moretag {
