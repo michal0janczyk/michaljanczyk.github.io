@@ -13,7 +13,7 @@ permalink: /resume/
 * Leveraged many AWS and GCP storage, database, and technologies (S3, Postgres, DynamoDB, Redshift, Data Pipeline, EMR Clusters) for OLX Group data infrastructure using Infrastructure as Code(Terraform)
 * Built and managed ETL processes using Airflow, Redshift, Presto, EMR to create data pipelines that are used by various teams in OLX Group
 * Created monitoring, automating, data quality rules checking and alerting system for multiple data pipelines based on integrated Tableau Server
-* Created a hardware monitoring system for multiple AWS ES2 based on SignalFx.
+* Created a hardware monitoring system for multiple AWS ES2 based on SignalFx
 * Created optimal solutions to make OLX Group GDPR compliant
   
 **Technologies: Python3.7, Scala**
@@ -26,13 +26,12 @@ permalink: /resume/
 ### Python Software Engineer
 **Hub of Tech: Jun 2018 – Nov 2018**
 * Designed and engineered web REST API back-end applications that provide human resources platform for recruiting medical personnel
-* Provide basic functionality such as two-factor login authentication, candidate and organization profile view. 
+* Provide basic functionality such as two-factor login authentication, candidate and organization profile view
 * Built designed and managed the machine learning engine used to connect employers with candidates
-* Perform Code reviews
 * Deploy and monitor few versions of the application using Docker and Redis
 * Collaboration with the front-end development team to build new features and define needed APIs
 * Manage mocks, docs, monitors, integration, and contract tests to assess product quality
-* Author and maintainer of REST API documentation as well as the creator of samples showing best practice techniques
+* Author, maintainer, and code reviewer of REST API documentation as well as the creator of samples showing best practice techniques}
   
 **Technologies: Python3.5, Django2.0, Django REST Framework3.8, PostgreSQL, SQLite**
 
@@ -57,7 +56,7 @@ permalink: /resume/
 
 * Building 5G system features and functions, including requirements, test cases, algorithms, use cases, parameter settings, and addressing any interactions with legacy features and functionality used by eNodeB modules
 * Resolving issues related to site engineering, configuration, eNodeB, and network/product faults software
-* Creation of technical documentation that contributed to advances in LTE & 5G Standards
+* Creation of technical documentation that contributed to advances in LTE and 5G Standards
 
 **Technologies: C++11, CppUnit, Erlang, Python3.5, Java, Google Protocol Buffer**
 
