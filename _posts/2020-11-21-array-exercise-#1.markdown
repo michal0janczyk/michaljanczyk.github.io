@@ -1,27 +1,9 @@
 ---
 layout: post
-title:  "Arrays"
-date:   2020-11-27 19:44:15 +0100
+title:  "Array Exercise #1"
+date:   2020-11-21
 categories: Data Structure
 ---
-
-The array is one of the most basic data structures in computer science. 
-We assume that you have worked with arrays before, so you are aware that an array is simply a list of data elements. The array is versatile, and can serve as a useful tool in many different situations, but let’s just give one quick example.
-
-One of the key differences is that arrays have indices, while lists do not.
-To understand this, it helps to know how arrays are stored in memory. When an array is created, it is always given some initial size - that is, the number of elements it should be able to hold (and how large each element is). The computer then finds a block of memory and sets aside the space for the array.
-Importantly, the space that gets set aside is one, continuous block. That is, all of the elements of the array are contiguous, meaning that they are all next to one another in memory.
-Another key characteristic of an array is that all of the elements are the same size.
-When we represent an array visually, we often draw it as a series of boxes that are all of the same size and all right next to one another.
-
-Because all of the elements are:
-1. next to one another
-2. the same size, this means that if we know the location of the first element, we can calculate the location of any other element.
-
-For example, if the first element in the array is at memory location `00` and the elements are `24 bytes`, then the next element would be at location `00 + 24 = 24`. And the one after that would be at `24 + 24 = 48`, and so on.
-Since we can easily calculate the location of any item in the array, we can assign each item an index and use that index for quickly and directly access the item.
-
-
 #### Arrays #1 [Educative][educative-array]
 <style type="text/css">
 .tg  {border-collapse:collapse;border-spacing:0;}

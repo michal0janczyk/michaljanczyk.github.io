@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "DFS"
-date:   2020-12-21 19:44:15 +0100
+date:   2020-12-21
 categories: Algoritm
 ---
 Take a look at full implementation of **[DFS][dfs-imp]**.
