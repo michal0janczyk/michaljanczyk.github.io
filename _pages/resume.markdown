@@ -82,7 +82,7 @@ Lodz University of Technology(Feb 2016)
 
 ### Coursera
 * Machine Learning
-* Algorithms-Part I (In Progress)} 
+* Algorithms-Part I (In Progress)
 
 
 
