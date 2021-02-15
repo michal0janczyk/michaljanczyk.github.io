@@ -10,10 +10,8 @@
         <ul class="contact-list">
           <li class="p-name">
             {%- if site.copyright -%}
-              <div id="left">
-              <li>&copy; {{ site.copyright }} {{ now | date: "%Y" }}</li>
+              &copy; {{ site.copyright }} {{ now | date: "%Y" }}
               {{- site.description | escape -}}
-              </div>
             {%- else -%}
               <!-- {{ site.title | escape }} -->
             {%- endif -%}
