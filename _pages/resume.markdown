@@ -6,23 +6,21 @@ permalink: /resume/
 ## Experience
 ### Data Engineer 
 **@ OLX Group Dec 2018 – Present**
-
-I'm responsible for the design, build and continuously improve Global BI products based on varied database technologies (Redshift, MS SQL Server, MySQL, PostgreSQL and other), using leading cloud computing solutions on massive datasets.
-* Architected an end to end real time streaming data lake which delivery data to important internal stakeholders, top management and analytics team, size about 10TB processed data per month.
-* 
-* GDPR compliant data preparation
-* Monitoring clusters performance, analyze and optimize jobs, queries and data footprint
-* Delivering ad-hoc datasets as well as build stable data pipelines, set up monitoring
-* Unifying data sources and automate inventory and metadata collection
-* Automating data quality rules checking, monitoring and alerting
-* Working closely with internal customers (data analysts, data scientists, business analysts)
-* Analyzing requirements, translate into JIRA tasks, estimate complexity, workload and negotiate priorities
+* Architected an end to end real time streaming data lake which delivers data to important internal stakeholders, top management and analytics team - size about 20TB processed data per month.
+* Being the servant leader for an external team of 6 developers, providing data to our pipelines. Translation of the business requirements of our customers into technical specifications for the team. Analyzing requirements, interpret into JIRA tasks, estimate complexity, workload and negotiate priorities. Being the first point of contact related to technical aspects, database design, code and hardware optimisation, testing. 
+* Designed and engineered an easily scalable end to end data deduplication ingestion pipeline for the business need to preserve unique content.
+* Moving the existing infrastructure from Redshift to high-performance solutions using the Presto engine to reduce costs.
+* Leveraged many AWS and GCP storage, database, and technologies (S3, Postgres, DynamoDB, Redshift, Data Pipeline, EMR Clusters) for OLX Group data infrastructure using Infrastructure as Code(Terraform)
+* Built and managed ETL processes using Airflow, Redshift, Presto, EMR to create data pipelines that are used by various teams in OLX Group.
+* Created a monitoring, automating, data quality rules checking and alerting system for multiple data pipelines based on integrated Tableau Server.
+* Created a hardware monitoring system for multiple AWS ES2 based on SignalFx.
+* Created optimal solutions to make OLX Group GDPR compliant.
 
 **Technologies: Python3.7, Scala**
 
-**Software automation tools: Docker, Jira, Jenkins, Github**
+**Software automation tools: Docker, Prest, Kylin, Jenkins, Gitlab**
 
-**AWS: S3, Glue, EMR, Athena, Spectrum**
+**AWS: S3, Glue, EC2, EMR, Athena, Spectrum, Secrets Manager, Redshift**
 
 -----
 ### Python Software Engineer
