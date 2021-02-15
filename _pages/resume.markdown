@@ -3,9 +3,9 @@ layout: page
 title: resume
 permalink: /resume/
 ---
-## Experience
-### Data Engineer 
-**@ OLX Group Dec 2018 – Present**
+### Experience
+## Data Engineer 
+**OLX Group Dec 2018 – Present**
 * Architected an end to end real time streaming data lake which delivers data to important internal stakeholders, top management and analytics team - size about 20TB processed data per month.
 * Being the servant leader for an external team of 6 developers, providing data to our pipelines. Translation of the business requirements of our customers into technical specifications for the team. Analyzing requirements, interpret into JIRA tasks, estimate complexity, workload and negotiate priorities. Being the first point of contact related to technical aspects, database design, code and hardware optimisation, testing. 
 * Designed and engineered an easily scalable end to end data deduplication ingestion pipeline for the business need to preserve unique content.
