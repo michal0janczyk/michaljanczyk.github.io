@@ -18,7 +18,7 @@ permalink: /resume/
 
 **Technologies: Python3.7, Scala**
 
-**Software automation tools: Docker, Prest, Kylin, Jenkins, Gitlab**
+**Software automation tools: Docker, Presto, Kylin, Jenkins, Gitlab**
 
 **AWS: S3, Glue, EC2, EMR, Athena, Spectrum, Secrets Manager, Redshift**
 
