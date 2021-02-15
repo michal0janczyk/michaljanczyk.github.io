@@ -62,7 +62,7 @@ permalink: /resume/
 
 **Software automation tools: Linux, Git, Gerrit, Jenkins, Jira**
 
-## Education
+###  Education ---
 
 
 ## Certifications
