@@ -2,7 +2,7 @@ title: michal janczyk
 author:
   name: michal janczyk
   email:
-description: >- # this means to ignore newlines until "baseurl:"
+description: > # this means to ignore newlines until "baseurl:"
   nothing personal just a blog
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://michal0janczyk.github.io" # the base hostname & protocol for your site, e.g. http://example.com
