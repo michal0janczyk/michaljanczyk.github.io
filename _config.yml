@@ -26,7 +26,7 @@ minima:
     github_username: michal0janczyk
     twitter_username: michal0janczyk
 
-# Build settings
+    # Build settings
 theme: minima
 copyright: "michal janczyk"
 # title-logo: /images/m_janczyk.jpg
