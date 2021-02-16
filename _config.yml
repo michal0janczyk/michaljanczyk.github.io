@@ -24,14 +24,16 @@ description: >- # this means to ignore newlines until "baseurl:"
   nothing personal just a blog
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://michal0janczyk.github.io" # the base hostname & protocol for your site, e.g. http://example.com
-twitter_username: michal0janczyk
-github_username: michal0janczyk
+
+social_links:
+  linkedin_username: michal-janczyk
+  github_username: michal0janczyk
+  twitter_username: michal0janczyk
 
 # Custom fields
 # Author
 author: michal janczyk
 # Social Media
-linkedin_username: michal-janczyk
 # Copyrights
 copyright: "michal janczyk"
 # title-logo: /images/m_janczyk.jpg
