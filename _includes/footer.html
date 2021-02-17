@@ -15,9 +15,9 @@
       {%- if site.author %}
         <ul class="contact-list">
           {% if site.author.name -%}
-          <li>&copy; {{ site.copyright }} {{ 'now' | date: "%Y" }}</li>
-            <li class="p-name">{{ site.author.name | escape }}</li>
-            <p>{{ site.description | escape }}</p>
+            <li>&copy; {{ site.copyright }} {{ 'now' | date: "%Y" }}</li>
+            <!-- <li class="p-name">{{ site.author.name | escape }}</li> -->
+            <li>{{ site.description | escape }}</li>
           {% endif -%}
           {% if site.author.email -%}
             <li><a class="u-email" href="mailto:{{ site.author.email }}">{{ site.author.email }}</a></li>
