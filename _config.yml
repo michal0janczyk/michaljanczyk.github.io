@@ -22,9 +22,9 @@ minima:
 
   # generate social links in footer
   social_links:
-    linkedin_username: michal-janczyk
-    github_username: michal0janczyk
-    twitter_username: michal0janczyk
+    linkedin: michal-janczyk
+    github: michal0janczyk
+    twitter: michal0janczyk
 
     # Build settings
 theme: minima
