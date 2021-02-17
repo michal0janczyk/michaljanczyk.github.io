@@ -1,104 +1,206 @@
----
-layout: page
-title: resume
-permalink: /resume/
----
+Johnny Coder
+============
 
-**Experience**
+----
 
-**Data Engineer**
+>  In this style, the resume starts with a blockquote, where
+>  you can briefly list your specialties, or include a salient
+>  quote. Ending a line with a backslash forces a line break.
 
-**OLX Group: Dec 2018 – Present**
+----
 
-- Architected an end to end real-time streaming data lake which delivers data to important internal stakeholders, top management, and analytics team - size about 20TB processed data per month
-- Being the servant leader for an external team of 6 developers, providing data to our pipelines. Translation of the business requirements of our customers into technical specifications for the team. Analyzing requirements, interpret into JIRA tasks, estimate complexity, workload and negotiate priorities. Being the first point of contact related to technical aspects, database design, code, and hardware optimization, testing
-- Designed and engineered an easily scalable end to end data deduplication ingestion pipeline for the business need to preserve unique content
-- Integrated the existing infrastructure from Redshift to high-performance solutions using the Presto engine to reduce costs
-- Leveraged many AWS and GCP storage, database, and technologies (S3, Postgres, DynamoDB, Redshift, Data Pipeline, EMR Clusters) for OLX Group data infrastructure using Infrastructure as Code(Terraform)
-- Build and managed ETL processes using Airflow, Redshift, Presto, EMR to create data pipelines that are used by various teams in OLX Group
-- Created monitoring, automating, data quality rules checking and alerting system for multiple data pipelines based on integrated Tableau Server
-- Created a hardware monitoring system for multiple AWS ES2 based on SignalFx
-- Created optimal solutions to make OLX Group GDPR compliant
+Education
+---------
 
-**Technologies: Python3.7, Scala**
+2010-2014 (expected)
+:   **PhD, Computer Science**; Awesome University (MyTown)
 
-**Software automation tools: Docker, Presto, Kylin, Jenkins, Gitlab**
+    *Thesis title: Deep Learning Approaches to the Self-Awesomeness
+     Estimation Problem*
 
-**AWS: S3, Glue, EC2, EMR, Athena, Spectrum, Secrets Manager, Redshift**
+2007-2010
+:   **BSc, Computer Science and Electrical Engineering**; University of
+    HomeTown (HomeTown)
 
----
+    *Minor: Awesomeology*
 
-**Python Software Engineer**
+Experience
+----------
 
-**Hub of Tech: Jun 2018 – Nov 2018**
+**Your Most Recent Work Experience:**
 
-- Designed and engineered web REST API back-end applications that provide human resources platform for recruiting medical personnel
-- Provided basic functionality such as two-factor login authentication, candidate and organization profile view
-- Build designed and managed the machine learning engine used to connect employers with candidates
-- Deployed and monitor few versions of the application using Docker and Redis
-- Contributed with the front-end development team to build new features and define needed APIs
-- Managed mocks, docs, monitors, integration, and contract tests to assess product quality
-- Author, maintainer, and code reviewer of REST API documentation as well as the creator of samples showing best practice techniques
+Short text containing the type of work done, results obtained,
+lessons learned and other remarks. Can also include lists and
+links:
 
-**Technologies: Python3.5, Django2.0, Django REST Framework3.8, PostgreSQL, SQLite**
+* First item
 
-**Software automation tools: Docker, Git, GitLab, Jira, Bitbucket, Linux**
+* Item with [link](http://www.example.com). Links will work both in
+  the html and pdf versions.
 
----
+**That Other Job You Had**
 
-**Software Engineer**
+Also with a short description.
 
-**BAE Systems Applied Intelligence: Jan 2018 – Jun 2018**
+Technical Experience
+--------------------
 
-- Worked with the high-speed real-time processing of very large amounts of data in complex distributed systems
-- implemented and maintained new features in social security software
-- Integrated with 3rd party machine learning libraries
-- Created unit testing of product features following internal procedures and standards
+My Cool Side Project
+:   For items which don't have a clear time ordering, a definition
+    list can be used to have named items.
 
-**Technologies: C++98, CppUnit, CppCheck, GlowCode, Boost, Python2.7, MS SQL**
+    * These items can also contain lists, but you need to mind the
+      indentation levels in the markdown source.
+    * Second item.
 
-**Software automation tools: Perforce, Jenkins, Jira, Visual Studio, Linux, Windows**
+Open Source
+:   List open source contributions here, perhaps placing emphasis on
+    the project names, for example the **Linux Kernel**, where you
+    implemented multithreading over a long weekend, or **node.js**
+    (with [link](http://nodejs.org)) which was actually totally
+    your idea...
 
----
+Programming Languages
+:   **first-lang:** Here, we have an itemization, where we only want
+    to add descriptions to the first few items, but still want to
+    mention some others together at the end. A format that works well
+    here is a description list where the first few items have their
+    first word emphasized, and the last item contains the final few
+    emphasized terms. Notice the reasonably nice page break in the pdf
+    version, which wouldn't happen if we generated the pdf via html.
 
-**C++ Junior Software Developer**
+:   **second-lang:** Description of your experience with second-lang,
+    perhaps again including a [link] [ref], this time placing the url
+    reference elsewhere in the document to reduce clutter (see source
+    file). 
 
-**Ericsson: Jun 2016 – Nov 2017**
+:   **obscure-but-impressive-lang:** We both know this one's pushing
+    it.
 
-- Worked with 5G system features and functions, including requirements, test cases, algorithms, use cases, parameter settings, and addressing any interactions with legacy features and functionality used by eNodeB modules
-- Resolved issues related to site engineering, configuration, eNodeB, and network/product faults software
-- Created technical documentation that contributed to advances in LTE and 5G Standards
+:   Basic knowledge of **C**, **x86 assembly**, **forth**, **Common Lisp**
 
-**Technologies: C++11, CppUnit, Erlang, Python3.5, Java, Google Protocol Buffer**
+[ref]: https://github.com/githubuser/superlongprojectname
 
-**Software automation tools: Linux, Git, Gerrit, Jenkins, Jira**
+Extra Section, Call it Whatever You Want
+----------------------------------------
 
----
+* Human Languages:
 
-**Education**
+     * English (native speaker)
+     * ???
+     * This is what a nested list looks like.
 
-**Master of Science in Computer Science**
-Lodz University of Technology(Feb 2018)
+* Random tidbit
 
-- Diploma thesis - Information diffusion modeling in online social networks based on data mining and fuzzy logic methods
+* Other sort of impressive-sounding thing you did
 
-**Bachelor of Science in Computer Science**
-Lodz University of Technology(Feb 2016)
+----
 
-- Diploma thesis - Synthesis of poly (2-(dimethylamino) ethyl methacrylate) from the surface of the silica particles
+> <email@example.com> • +00 (0)00 000 0000 • XX years old\
+> address - Mytown, Mycountry
 
----
 
-**Certifications**
+<!-- # ---
+# layout: page
+# title: resume
+# permalink: /resume/
+# ---
 
-**Udacity**
+# **Experience**
 
-- Artificial Intelligence
-- Data Structures and Algorithms
-- Product Manager
-- Data Architect (In Progress)
+# **Data Engineer**
 
-**Coursera**
+# **OLX Group: Dec 2018 – Present**
 
-- Machine Learning
-- Algorithms-Part I (In Progress)
+# - Architected an end to end real-time streaming data lake which delivers data to important internal stakeholders, top management, and analytics team - size about 20TB processed data per month
+# - Being the servant leader for an external team of 6 developers, providing data to our pipelines. Translation of the business requirements of our customers into technical specifications for the team. Analyzing requirements, interpret into JIRA tasks, estimate complexity, workload and negotiate priorities. Being the first point of contact related to technical aspects, database design, code, and hardware optimization, testing
+# - Designed and engineered an easily scalable end to end data deduplication ingestion pipeline for the business need to preserve unique content
+# - Integrated the existing infrastructure from Redshift to high-performance solutions using the Presto engine to reduce costs
+# - Leveraged many AWS and GCP storage, database, and technologies (S3, Postgres, DynamoDB, Redshift, Data Pipeline, EMR Clusters) for OLX Group data infrastructure using Infrastructure as Code(Terraform)
+# - Build and managed ETL processes using Airflow, Redshift, Presto, EMR to create data pipelines that are used by various teams in OLX Group
+# - Created monitoring, automating, data quality rules checking and alerting system for multiple data pipelines based on integrated Tableau Server
+# - Created a hardware monitoring system for multiple AWS ES2 based on SignalFx
+# - Created optimal solutions to make OLX Group GDPR compliant
+
+# **Technologies: Python3.7, Scala**
+
+# **Software automation tools: Docker, Presto, Kylin, Jenkins, Gitlab**
+
+# **AWS: S3, Glue, EC2, EMR, Athena, Spectrum, Secrets Manager, Redshift**
+
+# ---
+
+# **Python Software Engineer**
+
+# **Hub of Tech: Jun 2018 – Nov 2018**
+
+# - Designed and engineered web REST API back-end applications that provide human resources platform for recruiting medical personnel
+# - Provided basic functionality such as two-factor login authentication, candidate and organization profile view
+# - Build designed and managed the machine learning engine used to connect employers with candidates
+# - Deployed and monitor few versions of the application using Docker and Redis
+# - Contributed with the front-end development team to build new features and define needed APIs
+# - Managed mocks, docs, monitors, integration, and contract tests to assess product quality
+# - Author, maintainer, and code reviewer of REST API documentation as well as the creator of samples showing best practice techniques
+
+# **Technologies: Python3.5, Django2.0, Django REST Framework3.8, PostgreSQL, SQLite**
+
+# **Software automation tools: Docker, Git, GitLab, Jira, Bitbucket, Linux**
+
+# ---
+
+# **Software Engineer**
+
+# **BAE Systems Applied Intelligence: Jan 2018 – Jun 2018**
+
+# - Worked with the high-speed real-time processing of very large amounts of data in complex distributed systems
+# - implemented and maintained new features in social security software
+# - Integrated with 3rd party machine learning libraries
+# - Created unit testing of product features following internal procedures and standards
+
+# **Technologies: C++98, CppUnit, CppCheck, GlowCode, Boost, Python2.7, MS SQL**
+
+# **Software automation tools: Perforce, Jenkins, Jira, Visual Studio, Linux, Windows**
+
+# ---
+
+# **C++ Junior Software Developer**
+
+# **Ericsson: Jun 2016 – Nov 2017**
+
+# - Worked with 5G system features and functions, including requirements, test cases, algorithms, use cases, parameter settings, and addressing any interactions with legacy features and functionality used by eNodeB modules
+# - Resolved issues related to site engineering, configuration, eNodeB, and network/product faults software
+# - Created technical documentation that contributed to advances in LTE and 5G Standards
+
+# **Technologies: C++11, CppUnit, Erlang, Python3.5, Java, Google Protocol Buffer**
+
+# **Software automation tools: Linux, Git, Gerrit, Jenkins, Jira**
+
+# ---
+
+# **Education**
+
+# **Master of Science in Computer Science**
+# Lodz University of Technology(Feb 2018)
+
+# - Diploma thesis - Information diffusion modeling in online social networks based on data mining and fuzzy logic methods
+
+# **Bachelor of Science in Computer Science**
+# Lodz University of Technology(Feb 2016)
+
+# - Diploma thesis - Synthesis of poly (2-(dimethylamino) ethyl methacrylate) from the surface of the silica particles
+
+# ---
+
+# **Certifications**
+
+# **Udacity**
+
+# - Artificial Intelligence
+# - Data Structures and Algorithms
+# - Product Manager
+# - Data Architect (In Progress)
+
+# **Coursera**
+
+# - Machine Learning
+# - Algorithms-Part I (In Progress) -->
