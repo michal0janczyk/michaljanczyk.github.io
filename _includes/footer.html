@@ -17,6 +17,7 @@
           {% if site.author.name -%}
           <li>&copy; {{ site.copyright }} {{ 'now' | date: "%Y" }}</li>
             <li class="p-name">{{ site.author.name | escape }}</li>
+            <p>{{ site.description | escape }}</p>
           {% endif -%}
           {% if site.author.email -%}
             <li><a class="u-email" href="mailto:{{ site.author.email }}">{{ site.author.email }}</a></li>
