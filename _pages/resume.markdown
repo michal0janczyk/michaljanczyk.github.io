@@ -5,7 +5,7 @@ permalink: /resume/
 ---
 **Experience**
 
-### Data Engineer
+**Data Engineer**
 
 **OLX Group: Dec 2018 – Present**
 * Architected an end to end real-time streaming data lake which delivers data to important internal stakeholders, top management, and analytics team - size about 20TB processed data per month
