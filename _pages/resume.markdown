@@ -24,6 +24,8 @@ permalink: /resume/
 
 **AWS: S3, Glue, EC2, EMR, Athena, Spectrum, Secrets Manager, Redshift**
 
+----
+
 **Python Software Engineer**
 
 **Hub of Tech: Jun 2018 – Nov 2018**
@@ -39,6 +41,8 @@ permalink: /resume/
 
 **Software automation tools: Docker, Git, GitLab, Jira, Bitbucket, Linux**
 
+----
+
 **Software Engineer**
 
 **BAE Systems Applied Intelligence: Jan 2018 – Jun 2018**
@@ -50,6 +54,8 @@ permalink: /resume/
 **Technologies: C++98, CppUnit, CppCheck, GlowCode, Boost, Python2.7, MS SQL**
 
 **Software automation tools: Perforce, Jenkins, Jira, Visual Studio, Linux, Windows**
+
+----
 
 **C++ Junior Software Developer**
 
