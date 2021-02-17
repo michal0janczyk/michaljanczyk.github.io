@@ -5,9 +5,9 @@ permalink: /resume/
 ---
 **Experience**
 
-> **Data Engineer**
->
-> **OLX Group: Dec 2018 – Present**
+**Data Engineer**
+
+**OLX Group: Dec 2018 – Present**
 * Architected an end to end real-time streaming data lake which delivers data to important internal stakeholders, top management, and analytics team - size about 20TB processed data per month
 * Being the servant leader for an external team of 6 developers, providing data to our pipelines. Translation of the business requirements of our customers into technical specifications for the team. Analyzing requirements, interpret into JIRA tasks, estimate complexity, workload and negotiate priorities. Being the first point of contact related to technical aspects, database design, code, and hardware optimization, testing
 * Designed and engineered an easily scalable end to end data deduplication ingestion pipeline for the business need to preserve unique content
@@ -24,8 +24,8 @@ permalink: /resume/
 
 **AWS: S3, Glue, EC2, EMR, Athena, Spectrum, Secrets Manager, Redshift**
 
------
-### Python Software Engineer
+**Python Software Engineer**
+
 **Hub of Tech: Jun 2018 – Nov 2018**
 * Designed and engineered web REST API back-end applications that provide human resources platform for recruiting medical personnel
 * Provided basic functionality such as two-factor login authentication, candidate and organization profile view
@@ -39,10 +39,9 @@ permalink: /resume/
 
 **Software automation tools: Docker, Git, GitLab, Jira, Bitbucket, Linux**
 
-------
-### Software Engineer
-**BAE Systems Applied Intelligence: Jan 2018 – Jun 2018**
+**Software Engineer**
 
+**BAE Systems Applied Intelligence: Jan 2018 – Jun 2018**
 * Worked with the high-speed real-time processing of very large amounts of data in complex distributed systems
 * implemented and maintained new features in social security software
 * Integrated with 3rd party machine learning libraries
@@ -52,10 +51,9 @@ permalink: /resume/
 
 **Software automation tools: Perforce, Jenkins, Jira, Visual Studio, Linux, Windows**
 
-------
-### C++ Junior Software Developer
-**Ericsson: Jun 2016 – Nov 2017**
+**C++ Junior Software Developer**
 
+**Ericsson: Jun 2016 – Nov 2017**
 * Worked with 5G system features and functions, including requirements, test cases, algorithms, use cases, parameter settings, and addressing any interactions with legacy features and functionality used by eNodeB modules
 * Resolved issues related to site engineering, configuration, eNodeB, and network/product faults software
 * Created technical documentation that contributed to advances in LTE and 5G Standards
@@ -64,7 +62,10 @@ permalink: /resume/
 
 **Software automation tools: Linux, Git, Gerrit, Jenkins, Jira**
 
-###  Education
+------
+
+**Education**
+
 **Master of Science in Computer Science**
 Lodz University of Technology(Feb 2018)
 * Diploma thesis - Information diffusion modeling in online social networks based on data mining and fuzzy logic methods
@@ -73,16 +74,17 @@ Lodz University of Technology(Feb 2018)
 Lodz University of Technology(Feb 2016)
 * Diploma thesis - Synthesis of poly (2-(dimethylamino) ethyl methacrylate) from the surface of the silica particles
 
+------
 
+**Certifications**
 
-### Certifications
-### Udacity
+**Udacity**
 * Artificial Intelligence
 * Data Structures and Algorithms
 * Product Manager 
 * Data Architect (In Progress)
 
-### Coursera
+**Coursera**
 * Machine Learning
 * Algorithms-Part I (In Progress)
 
