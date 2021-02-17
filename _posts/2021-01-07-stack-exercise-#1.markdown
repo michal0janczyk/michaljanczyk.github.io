@@ -4,8 +4,6 @@ title:  "Stack Exercise #1"
 date:   2021-01-07 
 categories: Algoritm
 ---
-# Exercise
-
 #### Determine if Brackets are Balanced
 
 We’re going to determine whether or not a set of brackets are balanced or not by making use of the stack data structure.

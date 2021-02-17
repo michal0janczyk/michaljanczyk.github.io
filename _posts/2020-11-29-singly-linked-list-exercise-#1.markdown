@@ -4,8 +4,6 @@ title:  "Singly Linked List Exercise #1"
 date:   2020-11-29
 categories: Data Structure
 ---
-# Exercise
-
 ## Node Swap
 
 One way to solve this is by iterating the linked list and keeping track of certain pieces of information that are going to be helpful.

@@ -4,8 +4,6 @@ title:  "Singly Linked List"
 date:   2020-11-28
 categories: Data Structure
 ---
-# Theory
-
 We can distinguished three different types of linked lists:
 
 - Singly Linked Lists
