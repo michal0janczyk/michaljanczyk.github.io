@@ -51,12 +51,9 @@ sass:
   style: :expanded # You might prefer to minify using :compressed
 
 # Pagination
-paginate: 15
+paginate: 100
 paginate_path: "/page/:num/"
 
-# Build settings
-# Remove minima regular theme and make my custom
-# theme: minima
 plugins:
   - jekyll-feed
   - jekyll-paginate
