@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Array Exercise #1"
+title:  "List Exercise #1"
 date:   2020-11-21
 categories: Data Structure
 ---
