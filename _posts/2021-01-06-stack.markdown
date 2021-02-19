@@ -11,86 +11,85 @@ Stack was implemented according to the principle: **LIFO = FILO**
 Pile of books. If we want to retrieve a book from this stack, you can take the book on top. Taking a book from the bottom is a bit precarious and we don’t want to topple the entire stack. Therefore, we’ll take down the top book on the stack and read it or do whatever we want to do with it.
 
 <style type="text/css">
-.tg  {border-collapse:collapse;border-color:#ccc;border-spacing:0;}
-.tg td{background-color:#fff;border-color:#ccc;border-style:solid;border-width:1px;color:#333;
-  font-family:Arial, sans-serif;font-size:14px;overflow:hidden;padding:10px 5px;word-break:normal;}
-.tg th{background-color:#f0f0f0;border-color:#ccc;border-style:solid;border-width:1px;color:#333;
-  font-family:Arial, sans-serif;font-size:14px;font-weight:normal;overflow:hidden;padding:10px 5px;word-break:normal;}
-.tg .tg-c3ow{border-color:inherit;text-align:center;vertical-align:top}
+.tg  {border-collapse:collapse;border-spacing:0;}
+.tg td{border-style:solid;border-width:0px;font-family:Arial, sans-serif;font-size:14px;overflow:hidden;
+  padding:10px 5px;word-break:normal;}
+.tg th{border-style:solid;border-width:0px;font-family:Arial, sans-serif;font-size:14px;font-weight:normal;
+  overflow:hidden;padding:10px 5px;word-break:normal;}
+.tg .tg-zda1{border-color:inherit;font-family:Arial, Helvetica, sans-serif !important;;text-align:center;vertical-align:top}
 </style>
 <table class="tg">
 <thead>
   <tr>
-    <th class="tg-c3ow" rowspan="2">Data Structure</th>
-    <th class="tg-c3ow" colspan="3">Average cases</th>
-    <th class="tg-c3ow" colspan="3">Worst cases</th>
-  </tr>
-  <tr>
-    <td class="tg-c3ow">Insert</td>
-    <td class="tg-c3ow">Delete</td>
-    <td class="tg-c3ow">Search</td>
-    <td class="tg-c3ow">Insert</td>
-    <td class="tg-c3ow">Delete</td>
-    <td class="tg-c3ow">Search</td>
+    <th class="tg-zda1">Case</th>
+    <th class="tg-zda1" colspan="3">Average cases</th>
+    <th class="tg-zda1" colspan="3">Worst cases</th>
   </tr>
 </thead>
 <tbody>
   <tr>
-    <td class="tg-c3ow">Array/Stack/Queue</td>
-    <td class="tg-c3ow">O(1)</td>
-    <td class="tg-c3ow">O(1)</td>
-    <td class="tg-c3ow">O(n)</td>
-    <td class="tg-c3ow">O(1)</td>
-    <td class="tg-c3ow">O(1)</td>
-    <td class="tg-c3ow">O(n)</td>
+    <td class="tg-zda1">Data Structure</td>
+    <td class="tg-zda1">Insert</td>
+    <td class="tg-zda1">Delete</td>
+    <td class="tg-zda1">Search</td>
+    <td class="tg-zda1">Insert</td>
+    <td class="tg-zda1">Delete</td>
+    <td class="tg-zda1">Search</td>
   </tr>
   <tr>
-    <td class="tg-c3ow">Linked List</td>
-    <td class="tg-c3ow">O(1)</td>
-    <td class="tg-c3ow">O(1)</td>
-    <td class="tg-c3ow">O(n)</td>
-    <td class="tg-c3ow">O(1)</td>
-    <td class="tg-c3ow">O(1)</td>
-    <td class="tg-c3ow">O(n)</td>
+    <td class="tg-zda1">Array/Stack/Queue</td>
+    <td class="tg-zda1">O(1)</td>
+    <td class="tg-zda1">O(1)</td>
+    <td class="tg-zda1">O(n)</td>
+    <td class="tg-zda1">O(1)</td>
+    <td class="tg-zda1">O(1)</td>
+    <td class="tg-zda1">O(n)</td>
   </tr>
   <tr>
-    <td class="tg-c3ow">Doubly Linked List</td>
-    <td class="tg-c3ow">O(1)</td>
-    <td class="tg-c3ow">O(1)</td>
-    <td class="tg-c3ow">O(n)</td>
-    <td class="tg-c3ow">O(1)</td>
-    <td class="tg-c3ow">O(1)</td>
-    <td class="tg-c3ow">O(n)</td>
+    <td class="tg-zda1">Linked List</td>
+    <td class="tg-zda1">O(1)</td>
+    <td class="tg-zda1">O(1)</td>
+    <td class="tg-zda1">O(n)</td>
+    <td class="tg-zda1">O(1)</td>
+    <td class="tg-zda1">O(1)</td>
+    <td class="tg-zda1">O(n)</td>
   </tr>
   <tr>
-    <td class="tg-c3ow">Hash Table</td>
-    <td class="tg-c3ow">O(1)</td>
-    <td class="tg-c3ow">O(1)</td>
-    <td class="tg-c3ow">O(1)</td>
-    <td class="tg-c3ow">O(n)</td>
-    <td class="tg-c3ow">O(n)</td>
-    <td class="tg-c3ow">O(n)</td>
+    <td class="tg-zda1">Doubly Linked List</td>
+    <td class="tg-zda1">O(1)</td>
+    <td class="tg-zda1">O(1)</td>
+    <td class="tg-zda1">O(n)</td>
+    <td class="tg-zda1">O(1)</td>
+    <td class="tg-zda1">O(1)</td>
+    <td class="tg-zda1">O(n)</td>
   </tr>
   <tr>
-    <td class="tg-c3ow">Binary Search Tree</td>
-    <td class="tg-c3ow">O(log(n))</td>
-    <td class="tg-c3ow">O(log(n))</td>
-    <td class="tg-c3ow">O(log(n))</td>
-    <td class="tg-c3ow">O(n)</td>
-    <td class="tg-c3ow">O(n)</td>
-    <td class="tg-c3ow">O(n)</td>
+    <td class="tg-zda1">Hash Table</td>
+    <td class="tg-zda1">O(1)</td>
+    <td class="tg-zda1">O(1)</td>
+    <td class="tg-zda1">O(1)</td>
+    <td class="tg-zda1">O(n)</td>
+    <td class="tg-zda1">O(n)</td>
+    <td class="tg-zda1">O(n)</td>
+  </tr>
+  <tr>
+    <td class="tg-zda1">Binary Search Tree</td>
+    <td class="tg-zda1">O(log(n))</td>
+    <td class="tg-zda1">O(log(n))</td>
+    <td class="tg-zda1">O(log(n))</td>
+    <td class="tg-zda1">O(n)</td>
+    <td class="tg-zda1">O(n)</td>
+    <td class="tg-zda1">O(n)</td>
   </tr>
 </tbody>
 </table>
 
 # Stack Operations
-
 - Push - The operation to insert elements in a stack is called push. Push adds the element in the last place, so the new element automatically becomes the top.
 - Pop - Popping is when we take the top book of the stack and put it down. Deletes the most recently added item.
 - Peek - “What’s the top element?” and it can give that to us using the peek operation. Note that the peek operation does not remove the top element, it merely returns it
 
 # Implementation
-
 ```python
 class Stack():
     def __init__(self):
