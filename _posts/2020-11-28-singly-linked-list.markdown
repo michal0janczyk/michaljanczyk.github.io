@@ -67,9 +67,10 @@ Arrays are contiguous in memory which allows the access time to be constant, whe
 
 ```python
 class Node:
-  def __init__(self, data):
-    self.data = data
-    self.next = None
+	def __init__(self, data=None, next=None):
+		self.data = data
+		self.next = next
+
 
 class LinkedList:
   def __init__(self):
