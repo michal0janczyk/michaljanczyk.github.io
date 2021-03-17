@@ -5,6 +5,7 @@ date:   2020-11-22
 categories: Data Structure
 ---
 #### Arrays #1 [Educative][educative-lists-python-path]
+
 <style type="text/css">
 .tg  {border-collapse:collapse;border-spacing:0;}
 .tg td{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;
@@ -61,6 +62,7 @@ categories: Data Structure
 </table>
 
 Additional materials:
+
 * **[Ace the Python Coding Interview][educative-lists-python-path]**
 * **[Educative Coderust][educative-coderust]**
 * **[Udacity Arrays Exercises][udacity-array]**
