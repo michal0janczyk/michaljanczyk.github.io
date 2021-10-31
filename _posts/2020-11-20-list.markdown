@@ -2,7 +2,8 @@
 layout: post
 title:  "List"
 date:   2020-11-20
-categories: Data Structure
+category: Data Structures
+tags: data_structure
 ---
 The array is one of the most basic data structures in computer science.
 We assume that you have worked with arrays before, so you are aware that an array is simply a list of data elements. The array is versatile, and can serve as a useful tool in many different situations, but let’s just give one quick example.

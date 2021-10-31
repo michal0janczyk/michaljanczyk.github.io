@@ -2,7 +2,8 @@
 layout: post
 title:  "Singly Linked List"
 date:   2020-11-28
-categories: Data Structure
+category: Data Structures
+tags: data_structure
 ---
 We can distinguished three different types of linked lists:
 

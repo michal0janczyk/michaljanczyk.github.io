@@ -2,7 +2,8 @@
 layout: post
 title:  "String"
 date:   2020-11-30
-categories: Algoritm
+category: Algorithms
+tags: algorithms
 ---
 The first thing to understand is that a string in Python or C ++ is a variable length array.
 

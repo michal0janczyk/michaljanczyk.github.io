@@ -2,7 +2,8 @@
 layout: post
 title:  "List Cheat Sheet"
 date:   2020-11-22
-categories: Data Structure
+category: Data Structures
+tags: data_structure
 ---
 #### Arrays #1 [Educative][educative-lists-python-path]
 

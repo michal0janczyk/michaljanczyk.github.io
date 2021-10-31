@@ -2,7 +2,8 @@
 layout: post
 title:  "Stack"
 date:   2021-01-06
-categories: Algoritm
+category: Algorithms
+tags: algorithms
 ---
 Take a look at full implementation of [Stack](https://github.com/michal0janczyk/interview_preparation/blob/master/Coding%20Challenges/Educative/Data%20Structures%20and%20Algorithms%20in%20Python/Stack/stack.py)
 
@@ -28,7 +29,7 @@ Pile of books. If we want to retrieve a book from this stack, you can take the b
 </thead>
 <tbody>
   <tr>
-    <td class="tg-zda1">Data Structure</td>
+    <td class="tg-zda1">Data Structures</td>
     <td class="tg-zda1">Insert</td>
     <td class="tg-zda1">Delete</td>
     <td class="tg-zda1">Search</td>

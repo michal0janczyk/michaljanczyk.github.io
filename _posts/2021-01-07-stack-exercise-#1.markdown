@@ -2,7 +2,8 @@
 layout: post
 title:  "Stack Exercise #1"
 date:   2021-01-07 
-categories: Algoritm
+category: Algorithms
+tags: algorithms
 ---
 #### Determine if Brackets are Balanced
 

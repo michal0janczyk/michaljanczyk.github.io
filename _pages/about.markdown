@@ -95,7 +95,7 @@ Lodz University of Technology(Feb 2016)
 ###### Udacity
 
 - Artificial Intelligence
-- Data Structures and Algorithms
+- Data Structuress and Algorithms
 - Product Manager
 - Data Architect (In Progress)
 

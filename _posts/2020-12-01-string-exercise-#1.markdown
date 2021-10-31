@@ -2,7 +2,8 @@
 layout: post
 title:  "String Exercise #1"
 date:   2020-12-01
-categories: Algoritm
+category: Algorithms
+tags: algorithms
 ---
 Exercise 1. Reverse Strings
 In this first exercise, the goal is to write a function that takes a string as input and then returns the reversed string.

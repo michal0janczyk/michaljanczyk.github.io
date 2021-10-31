@@ -2,7 +2,8 @@
 layout: post
 title:  "Recursion"
 date:   2020-12-05
-categories: Algoritm
+category: Algorithms
+tags: algorithms
 ---
 Recursion...A recursive function occurs when a function that calls itself until a "base condition" is true, and execution stops.
 

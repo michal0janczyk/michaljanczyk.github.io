@@ -2,7 +2,8 @@
 layout: post
 title:  "DFS"
 date:   2020-12-21
-categories: Algoritm
+category: Algorithms
+tags: algorithms
 ---
 Take a look at full implementation of **[DFS][dfs-imp]**.
 

@@ -31,7 +31,7 @@ theme: minima
 copyright: "michal janczyk"
 # title-logo: /images/m_janczyk.jpg
 
-# markdown: kramdown
+markdown: kramdown
 highlighter: rouge
 
 # Code
@@ -48,11 +48,17 @@ kramdown:
 
 # Set the Sass partials directory, as we're using @imports
 sass:
-  style: :expanded # You might prefer to minify using :compressed
+  style: :compressed # You might prefer to minify using :compressed/expanded
+  sass_dir: _sass
 
 # Pagination
 paginate: 100
 paginate_path: "/page/:num/"
+
+# Navigation (2nd level links supported)
+# Where are tags and categories displayed
+tag_page: "/blog/tags/"
+category_page: "/blog/categories/"
 
 plugins:
   - jekyll-feed

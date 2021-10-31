@@ -1,57 +1,57 @@
 ---
 layout: default
 pagination:
-  enabled: true
+enabled: true
 ---
 
 <div class="home">
   {%- if page.title -%}
-    <h1 class="page-heading">{{ page.title }}</h1>
+  <h1 class="page-heading">{{ page.title }}</h1>
   {%- endif -%}
 
   {%- if site.posts.size > 0 -%}
-    <ul class="post-list">
-      {%- for post in paginator.posts -%}
+  <ul class="post-list">
+    {%- for post in paginator.posts -%}
 
-      <li>
+    <li>
 
-        <h2 class="post-title" style='margin-bottom:0px;' >
-          <a class="post-link" href="{{ post.url | relative_url }}">
-            {{ post.title | escape }}
-          </a>
-        </h2>
-         {%- assign date_format = site.minima.date_format | default: "%B %-d, %Y" -%}
-        <span class="post-meta">{{ post.date | date: date_format }}</span>
-        <div class="post-summary">
-          {%- if site.show_excerpts -%}
-            {{ post.excerpt | strip_html | truncatewords:50 }}
-          {%- endif -%}
-        </div>
-      </li>
-      {%- endfor -%}
-    </ul>
-    <!-- Pagination links -->
-    <nav class="navigation">
-      <div class="nav-links">
-          {% if paginator.previous_page %}
-            <div class="nav-next">
-                <a href="{{ paginator.previous_page_path }}">
-                  <span class="meta-nav">←</span>
-                    Newer Posts
-                  </a>
-            </div>
-          {% endif %}
+      <h2 class="post-title" style='margin-bottom:0px;'>
+        <a class="post-link" href="{{ post.url | relative_url }}">
+          {{ post.title | escape }}
+        </a>
+      </h2>
+      {%- assign date_format = site.minima.date_format | default: "%B %-d, %Y" -%}
+      <span class="post-meta">{{ post.date | date: date_format }}</span>
+      <div class="post-summary">
+        {%- if site.show_excerpts -%}
+        {{ post.excerpt | strip_html | truncatewords:50 }}
+        {%- endif -%}
+      </div>
+    </li>
+    {%- endfor -%}
+  </ul>
+  <!-- Pagination links -->
+  <nav class="navigation">
+    <div class="nav-links">
+      {% if paginator.previous_page %}
+      <div class="nav-next">
+        <a href="{{ paginator.previous_page_path }}">
+          <span class="meta-nav">←</span>
+          Newer Posts
+        </a>
+      </div>
+      {% endif %}
 
-          {% if paginator.next_page %}
-            <div class="nav-previous">
-                <a href="{{ paginator.next_page_path }}">
-                  Older Posts
-                  <span class="meta-nav">→</span>
-                </a>
-            </div>
-          {% endif %}
-        </div>
-    </nav>
+      {% if paginator.next_page %}
+      <div class="nav-previous">
+        <a href="{{ paginator.next_page_path }}">
+          Older Posts
+          <span class="meta-nav">→</span>
+        </a>
+      </div>
+      {% endif %}
+    </div>
+  </nav>
   {%- endif -%}
 
 </div>
