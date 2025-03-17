@@ -5,7 +5,7 @@ author:
 description: > # this means to ignore newlines until "baseurl:"
   nothing personal just a blog
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "https://michal0janczyk.github.io" # the base hostname & protocol for your site, e.g. http://example.com
+url: "https://michaljanczyk.com" # the base hostname & protocol for your site, e.g. http://example.com
 
 # Excerpts
 # Another obvious difference was the lack of an excerpt under each post title.
@@ -23,11 +23,10 @@ minima:
   # generate social links in footer
   social_links:
     linkedin: michal-janczyk
-    github: michal0janczyk
-    twitter: michal0janczyk
+    github: michaljanczyk
 
 # Build settings
-theme: minima
+theme: jekyll-theme-minimal
 copyright: "michal janczyk"
 # title-logo: /images/m_janczyk.jpg
 
