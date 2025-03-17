@@ -115,3 +115,11 @@ class Stack():
     def get_stack(self):
         return self.items
 ```
+
+```mermaid
+graph TD;
+    A-->B;
+    A-->C;
+    B-->D;
+    C-->D;
+```
