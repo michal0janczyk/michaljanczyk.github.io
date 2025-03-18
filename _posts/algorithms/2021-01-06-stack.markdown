@@ -4,7 +4,6 @@ title:  "Stack"
 date:   2021-01-06
 category: Algorithms
 tags: algorithms
-mermaid: true
 ---
 Take a look at full implementation of [Stack](https://github.com/michal0janczyk/interview_preparation/blob/master/Coding%20Challenges/Educative/Data%20Structures%20and%20Algorithms%20in%20Python/Stack/stack.py)
 
@@ -115,12 +114,4 @@ class Stack():
 
     def get_stack(self):
         return self.items
-```
-
-```mermaid
-graph TD;
-    A-->B;
-    A-->C;
-    B-->D;
-    C-->D;
 ```
