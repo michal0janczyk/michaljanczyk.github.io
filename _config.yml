@@ -32,6 +32,8 @@ copyright: "michal janczyk"
 
 markdown: kramdown
 highlighter: rouge
+mermaid: true
+use_math: true
 
 # Code
 # Jekyll 3 now only supports Kramdown for Markdown
