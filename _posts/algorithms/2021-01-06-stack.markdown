@@ -117,6 +117,8 @@ class Stack():
         return self.items
 ```
 
+{% include mermaid.html %}
+
 ```mermaid
 graph TD;
     A-->B;
