@@ -7,67 +7,78 @@ tags: algorithms
 ---
 Take a look at full implementation of **[DFS][dfs-imp]**.
 
-Traversing a tree, is a method of visiting all its nodes in a strictly defined order. 
-For general trees, there are two methods of visiting **Pre-Order** and **Post-Order**, 
-for binary trees (where a node can have a maximum of two children) there is also the 
-**In-Order** method. 
-
-The **Pre-Order** method visits nodes in the following order:
-* first root,
-* then left subtree until we reach None
-* next righ subtree until we reach None
-{% highlight python %}
-def pre_order(tree):
-    visit_order = list()
-    def traverse(node):
-        if node:
-            # visit the node
-            visit_order.append(node.get_value())
-            # traverse left subtree
-            traverse(node.get_left_child())
-            # traverse right subtree
-            traverse(node.get_right_child())
-    traverse(tree.get_root())
-    return visit_order
-{% endhighlight %}
-
-Traversing with **In-Order**:
-* first traverse the left subtree until we reach None
-* then visit back to the node(root)
-* next traverse the right subtree until we reach None
-{% highlight python %}
-def in_order(tree):
-    visit_order = list()
-    def traverse(node):
-        if node:
-            # traverse left subtree
-            traverse(node.get_left_child())
-            # visit node
-            visit_order.append(node.get_value())
-            # traverse right sub-tree
-            traverse(node.get_right_child())
-    traverse(tree.get_root())
-    return visit_order
-{% endhighlight %}
-
-The **Post-Order** Method:
-* traverse left subtree
-* then right subtree
-* then visit the node.
-{% highlight python %}
-def post_order(tree):
-    visit_order = list()
-    def traverse(node):
-        if node:
-            # traverse left subtree
-            traverse(node.get_left_child())
-            # traverse right subtree
-            traverse(node.get_right_child())
-            # visit node
-            visit_order.append(node.get_value())
-    traverse(tree.get_root())
-    return visit_order
-{% endhighlight %}
-
+Depth-First Search (DFS) is an algorithm for traversing or searching tree or graph data structures. The algorithm starts at the root node (selecting some arbitrary node as the root node in the case of a graph) and explores as far as possible along each branch before backtracking.  
+  
+## DFS Operations  
+  
+The primary operations that can be performed using DFS are:  
+  
+- **Traversal**: DFS is used to traverse all nodes of a graph or tree using the concept of backtracking. It traverses by exploring a vertex then going to its adjacent vertices and further exploring them and so on, until all vertices are explored.  
+- **Topological Sorting**: DFS can be used to do Topological Sorting. Topological Sort for a graph is not possible if the graph is not a DAG (Directed Acyclic Graph).  
+- **Detecting cycle**: DFS can be used to detect a cycle in a Graph. DFS for a connected graph produces a tree.  
+- **Path Finding**: DFS can be used to find a path between two vertices in a graph.  
+  
+## DFS Implementation in Python  
+  
+Here is a basic implementation of DFS in Python:  
+  
+\```python  
+class Graph:  
+  
+    def __init__(self):  
+        self.graph = defaultdict(list)  
+  
+    def addEdge(self, u, v):  
+        self.graph[u].append(v)  
+  
+    def DFSUtil(self, v, visited):  
+        visited.add(v)  
+        print(v, end=' ')  
+        for neighbour in self.graph[v]:  
+            if neighbour not in visited:  
+                self.DFSUtil(neighbour, visited)  
+  
+    def DFS(self, v):  
+        visited = set()  
+        self.DFSUtil(v, visited)  
+\```  
+  
+## DFS Exercises  
+  
+### Exercise #1: Path between two nodes  
+  
+This exercise involves checking if a path exists between two nodes using DFS.  
+  
+\```python  
+def is_path(self, start_vertex, end_vertex):  
+    visited = set()  
+    self.DFSUtil(start_vertex, visited)  
+  
+    if end_vertex in visited:  
+        return True  
+    return False  
+\```  
+  
+### Exercise #2: Detect Cycle in a Graph  
+  
+This exercise involves detecting a cycle in a Graph using DFS.  
+  
+\```python  
+def is_cyclic_util(self, vertex, visited, rec_stack):  
+    visited[vertex] = True  
+    rec_stack[vertex] = True  
+  
+    for neighbour in self.graph[vertex]:  
+        if visited[neighbour] == False:  
+            if self.is_cyclic_util(neighbour, visited, rec_stack) == True:  
+                return True  
+        elif rec_stack[neighbour] == True:  
+            return True  
+  
+    return False  
+\```  
+  
+By understanding these basic operations and exercises, you'll have a solid foundation for working with DFS in any coding interview or real-world application. 
   
 [dfs-imp]: https://github.com/michal0janczyk/udacity_data_structures_and_algorithms_nanodegree/blob/main/Data%20Structures/Trees/02%20traverse_a_tree_dfs_solution.ipynb
+
