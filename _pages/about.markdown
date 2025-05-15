@@ -116,6 +116,5 @@ Lodz University of Technology (Feb 2016)
 Feel free to connect with me on:
 - [LinkedIn](https://www.linkedin.com/in/michal0janczyk)
 - [GitHub](https://github.com/michal0janczyk)
-- [Email](mailto:michal.jan.janczyk@gmail.com)
 
 ---

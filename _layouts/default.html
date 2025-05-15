@@ -1,11 +1,22 @@
 <!DOCTYPE html>
 <html lang="{{ page.lang | default: site.lang | default: "en" }}">
 
-  {%- include head.html -%}
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>{{ page.title }} | {{ site.title }}</title>
+
+    <!-- Favicon -->
+    <link rel="icon" href="/images/favicon/favicon.ico" type="image/x-icon">
+
+    <!-- Additional meta tags or links can go here -->
+    {%- include head.html -%}  <!-- Include your head content here, like CSS, JS, etc. -->
+
+  </head>
 
   <body>
 
-    {%- include header.html -%}
+    {%- include header.html -%} <!-- Header content -->
 
     <main class="page-content" aria-label="Content">
       <div class="wrapper">
@@ -13,7 +24,7 @@
       </div>
     </main>
 
-    {%- include footer.html -%}
+    {%- include footer.html -%} <!-- Footer content -->
 
   </body>
 
