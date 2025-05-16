@@ -6,7 +6,7 @@ permalink: /about/
 
 ## Hi there
 
-I’m Michał Janczyk – a cloud enthusiast passionate about optimizing cloud systems and preventing disruptions. I work with AWS, Azure, and GCP to ensure seamless, reliable cloud experiences, all while keeping things efficient and enjoyable.
+I’m Michal – a cloud enthusiast passionate about optimizing cloud systems and preventing disruptions. I work with AWS, Azure, and GCP to ensure seamless, reliable cloud experiences, all while keeping things efficient and enjoyable.
 
 ---
 
