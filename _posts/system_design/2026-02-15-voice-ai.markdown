@@ -6,51 +6,88 @@ category: System Design
 tags: system_design
 ---
 
-<div style="margin: 40px 0; text-align: center;">
-    <button id="v-btn" disabled style="background-color: #333; color: white; padding: 20px 40px; border: none; border-radius: 12px; font-weight: 600; cursor: not-allowed; transition: 0.3s;">
-        Waiting for Engine...
-    </button>
+<div id="ai-widget-container" style="text-align: center; margin: 40px 0; padding: 20px; border: 1px dashed #ccc; border-radius: 10px; background-color: #fafafa;">
+    
+    <button id="talkButton" style="
+        background-color: #00D1FF; 
+        color: white; 
+        border: none; 
+        padding: 15px 30px; 
+        font-size: 18px; 
+        font-weight: bold; 
+        border-radius: 30px; 
+        cursor: pointer; 
+        transition: transform 0.2s, background-color 0.2s; 
+        box-shadow: 0 4px 15px rgba(0, 209, 255, 0.3);
+    ">Start Conversation</button>
+
+    <div id="ai-status" style="margin-top: 15px; color: #666; font-size: 14px; font-family: sans-serif;">
+        Ready to connect...
+    </div>
+
 </div>
 
-<script src="https://unpkg.com/@elevenlabs/convai-sdk@0.2.2/dist/index.bundle.js"></script>
+<script type="module">
+    import { Conversation } from 'https://cdn.jsdelivr.net/npm/@elevenlabs/convai-sdk@latest/+esm';
 
-<script>
-  const btn = document.getElementById('v-btn');
-  let conv;
+    const talkButton = document.getElementById('talkButton');
+    const statusDiv = document.getElementById('ai-status');
+    let conversation;
 
-  // This loop clears the 'undefined' error by waiting for the script to land
-  const check = setInterval(() => {
-    if (window.ElevenLabsConvAI) {
-      clearInterval(check);
-      btn.disabled = false;
-      btn.textContent = "See how it works";
-      btn.style.backgroundColor = "#00D1FF";
-      btn.style.cursor = "pointer";
-    }
-  }, 100);
+    // --- YOUR AGENT ID IS SET BELOW ---
+    const AGENT_ID = 'agent_4601khceyk26ebb9rbdrx4kvbn4b'; 
+    // ----------------------------------
 
-  btn.onclick = async () => {
-    if (!conv) {
-      try {
-        btn.textContent = "Connecting...";
-        conv = await window.ElevenLabsConvAI.Conversation.startSession({
-          agentId: "agent_4601khceyk26ebb9rbdrx4kvbn4b",
-          onConnect: () => {
-            btn.textContent = "End Session";
-            btn.style.backgroundColor = "#FF3B30";
-          },
-          onDisconnect: () => {
-            conv = null;
-            btn.textContent = "See how it works";
-            btn.style.backgroundColor = "#00D1FF";
-          }
-        });
-      } catch (e) {
-        btn.textContent = "Check Mic Access";
-        console.error(e);
-      }
-    } else {
-      await conv.endSession();
-    }
-  };
+    talkButton.onclick = async () => {
+        try {
+            if (conversation && conversation.status === 'connected') {
+                await conversation.endSession();
+                talkButton.innerText = 'Start Conversation';
+                statusDiv.innerText = 'Session ended.';
+                return;
+            }
+
+            talkButton.disabled = true;
+            talkButton.innerText = 'Connecting...';
+            statusDiv.innerText = 'Requesting microphone access...';
+            statusDiv.style.color = '#666';
+
+            conversation = await Conversation.startSession({
+                agentId: AGENT_ID,
+                onConnect: () => {
+                    talkButton.disabled = false;
+                    talkButton.innerText = 'Stop Talking';
+                    statusDiv.innerText = 'Connected! Speak now.';
+                    statusDiv.style.color = 'green';
+                },
+                onDisconnect: () => {
+                    talkButton.disabled = false;
+                    talkButton.innerText = 'Start Conversation';
+                    statusDiv.innerText = 'Disconnected.';
+                    statusDiv.style.color = '#666';
+                },
+                onError: (error) => {
+                    console.error('Conversation Error:', error);
+                    statusDiv.innerText = `Error: ${error}`;
+                    statusDiv.style.color = 'red';
+                    talkButton.disabled = false;
+                    talkButton.innerText = 'Start Conversation';
+                },
+                onModeChange: (mode) => {
+                    statusDiv.innerText = `Mode: ${mode.mode}`; 
+                }
+            });
+
+        } catch (error) {
+            console.error('Connection Failed:', error);
+            talkButton.disabled = false;
+            talkButton.innerText = 'Start Conversation';
+            if (error.toString().includes("NotAllowedError")) {
+                statusDiv.innerHTML = "Microphone denied. Please allow access.";
+            } else {
+                statusDiv.innerText = "Connection Failed. Check console.";
+            }
+            statusDiv.style.color = 'red';
+        }
+    };
 </script>
