@@ -6,80 +6,55 @@ category: System Design
 tags: system_design
 ---
 
-## Voice AI Interactive Demo
-
 <div style="margin: 40px 0; text-align: center;">
     <button id="test-voice-btn" style="
-        background-color: #333; 
+        background-color: #00D1FF; 
         color: #ffffff; 
         border: none; 
         padding: 20px 40px; 
         font-size: 1.2rem; 
         font-weight: 600; 
         border-radius: 8px; 
-        cursor: wait; 
-        transition: all 0.3s ease;
-        opacity: 0.6;
+        cursor: pointer;
     ">
-        Initializing Engine...
+        Click to Speak with AI
     </button>
 </div>
 
-<script src="https://unpkg.com/@elevenlabs/convai-sdk" type="text/javascript"></script>
+<script src="https://unpkg.com/@elevenlabs/convai-widget-embed" async type="text/javascript"></script>
 
 <script>
-  (function() {
-    const btn = document.getElementById('test-voice-btn');
-    let conversation;
+  const btn = document.getElementById('test-voice-btn');
+  let conversation;
 
-    // Recursive check to solve the 'undefined' error
-    function activateButton() {
-      if (window.ElevenLabsConvAI) {
-        btn.textContent = "Click to Speak with AI";
-        btn.style.backgroundColor = "#00D1FF";
-        btn.style.cursor = "pointer";
-        btn.style.opacity = "1";
-        btn.style.boxShadow = "0 4px 14px rgba(0, 209, 255, 0.3)";
-        console.log("ElevenLabs SDK Ready.");
-      } else {
-        setTimeout(activateButton, 100);
-      }
+  btn.onclick = async () => {
+    // The widget script exposes the SDK via 'ElevenLabsConvAI'
+    if (typeof ElevenLabsConvAI === 'undefined') {
+        alert("Voice engine is still loading. Please wait 2 seconds.");
+        return;
     }
 
-    activateButton();
-
-    btn.onclick = async () => {
-      // Final safety check
-      if (!window.ElevenLabsConvAI) return;
-
-      if (!conversation) {
-        try {
-          btn.textContent = "Connecting...";
-          
-          conversation = await window.ElevenLabsConvAI.Conversation.startSession({
-            agentId: "agent_4601khceyk26ebb9rbdrx4kvbn4b",
-            onConnect: () => {
-              btn.textContent = "Stop Session";
-              btn.style.backgroundColor = "#FF3B30";
-            },
-            onDisconnect: () => {
-              conversation = null;
-              btn.textContent = "Click to Speak with AI";
-              btn.style.backgroundColor = "#00D1FF";
-            }
-          });
-        } catch (err) {
-          console.error("Connection Error:", err);
-          btn.textContent = "Check Allowlist";
-        }
-      } else {
-        await conversation.endSession();
+    if (!conversation) {
+      try {
+        btn.textContent = "Connecting...";
+        conversation = await ElevenLabsConvAI.Conversation.startSession({
+          agentId: "agent_4601khceyk26ebb9rbdrx4kvbn4b",
+          onConnect: () => {
+            btn.textContent = "End Session";
+            btn.style.backgroundColor = "#FF3B30";
+          },
+          onDisconnect: () => {
+            conversation = null;
+            btn.textContent = "Click to Speak with AI";
+            btn.style.backgroundColor = "#00D1FF";
+          }
+        });
+      } catch (err) {
+        console.error(err);
+        btn.textContent = "Check Console";
       }
-    };
-  })();
+    } else {
+      await conversation.endSession();
+    }
+  };
 </script>
-
----
-Additional materials:
-- [ElevenLabs SDK Documentation](https://elevenlabs.io/docs/conversational-ai/sdk)
-- [System Design: Real-time Audio Streaming](https://michaljanczyk.com/category/system-design)
