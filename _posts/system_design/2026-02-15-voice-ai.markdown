@@ -5,29 +5,34 @@ date:   2026-02-15
 category: System Design
 tags: system_design
 ---
-<div id="ai-widget-container" style="text-align: center; margin: 40px 0; padding: 20px; border: 1px dashed #ccc; border-radius: 10px; background-color: #fafafa;">
+<div id="ai-widget-container" style="text-align: center; margin: 40px 0; padding: 30px 20px; border: 1px border: 1px solid #e1e4e8; border-radius: 12px; background-color: #f6f8fa; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif;">
     
+    <h3 style="margin-top: 0; color: #24292e;">Live Demo: Conversational Agent</h3>
+    <p style="color: #586069; font-size: 16px; margin-bottom: 25px; line-height: 1.5;">
+        Experience real-time voice AI directly in your browser. This demo establishes a 
+        client-side WebSocket connection to stream audio with low latency.
+    </p>
+
     <button id="talkButton" style="
         background-color: #00D1FF; 
         color: white; 
         border: none; 
-        padding: 15px 30px; 
-        font-size: 18px; 
-        font-weight: bold; 
+        padding: 12px 28px; 
+        font-size: 16px; 
+        font-weight: 600; 
         border-radius: 30px; 
         cursor: pointer; 
         transition: transform 0.2s, background-color 0.2s; 
-        box-shadow: 0 4px 15px rgba(0, 209, 255, 0.3);
+        box-shadow: 0 4px 12px rgba(0, 209, 255, 0.3);
     ">Start Conversation</button>
 
-    <div id="ai-status" style="margin-top: 15px; color: #666; font-size: 14px; font-family: sans-serif;">
+    <div id="ai-status" style="margin-top: 20px; color: #6a737d; font-size: 14px;">
         Ready to connect...
     </div>
 
 </div>
 
 <script type="module">
-    // FIXED: Using the correct package '@elevenlabs/client' via esm.sh
     import { Conversation } from 'https://esm.sh/@elevenlabs/client@latest';
 
     const talkButton = document.getElementById('talkButton');
@@ -51,33 +56,31 @@ tags: system_design
             talkButton.disabled = true;
             talkButton.innerText = 'Connecting...';
             statusDiv.innerText = 'Requesting microphone access...';
-            statusDiv.style.color = '#666';
+            statusDiv.style.color = '#6a737d';
 
-            // Start the session
             conversation = await Conversation.startSession({
                 agentId: AGENT_ID,
                 onConnect: () => {
                     talkButton.disabled = false;
                     talkButton.innerText = 'Stop Talking';
                     statusDiv.innerText = 'Connected! Speak now.';
-                    statusDiv.style.color = 'green';
+                    statusDiv.style.color = '#22863a'; // Green
                 },
                 onDisconnect: () => {
                     talkButton.disabled = false;
                     talkButton.innerText = 'Start Conversation';
                     statusDiv.innerText = 'Disconnected.';
-                    statusDiv.style.color = '#666';
+                    statusDiv.style.color = '#6a737d';
                     conversation = null;
                 },
                 onError: (error) => {
                     console.error('Conversation Error:', error);
                     statusDiv.innerText = `Error: ${error}`;
-                    statusDiv.style.color = 'red';
+                    statusDiv.style.color = '#cb2431'; // Red
                     talkButton.disabled = false;
                     talkButton.innerText = 'Start Conversation';
                 },
                 onModeChange: (mode) => {
-                    // Show if the agent is "speaking" or "listening"
                     statusDiv.innerText = `Agent is ${mode.mode}`; 
                 }
             });
@@ -92,7 +95,7 @@ tags: system_design
             } else {
                 statusDiv.innerText = "Connection Failed. Check console.";
             }
-            statusDiv.style.color = 'red';
+            statusDiv.style.color = '#cb2431';
         }
     };
 </script>
