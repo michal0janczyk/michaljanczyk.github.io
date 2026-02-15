@@ -12,7 +12,7 @@ tags: system_design
     </button>
 </div>
 
-<script src="https://unpkg.com/@elevenlabs/convai-sdk@latest/dist/index.bundle.js"></script>
+<script src="https://unpkg.com/@elevenlabs/convai-sdk@0.2.2/dist/index.bundle.js"></script>
 
 <script>
   const btn = document.getElementById('v-btn');
