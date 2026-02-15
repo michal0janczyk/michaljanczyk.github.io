@@ -1,35 +1,56 @@
 ---
 layout: post
-title:  "Voice AI Integration"
+title:  "Voice AI"
 date:   2026-02-15
 category: System Design
-tags: [ai, system_design]
+tags: system_design
 ---
 
-btn.onclick = async () => {
-  console.log("Button clicked..."); 
-  try {
-    if (!window.ElevenLabsConvAI) {
-      alert("SDK not loaded yet!");
-      return;
+<div style="margin: 40px 0; text-align: center;">
+    <button id="v-btn" disabled style="background-color: #333; color: white; padding: 20px 40px; border: none; border-radius: 12px; font-weight: 600; cursor: not-allowed; transition: 0.3s;">
+        Waiting for Engine...
+    </button>
+</div>
+
+<script src="https://unpkg.com/@elevenlabs/convai-sdk@latest/dist/index.bundle.js"></script>
+
+<script>
+  const btn = document.getElementById('v-btn');
+  let conv;
+
+  // This loop clears the 'undefined' error by waiting for the script to land
+  const check = setInterval(() => {
+    if (window.ElevenLabsConvAI) {
+      clearInterval(check);
+      btn.disabled = false;
+      btn.textContent = "See how it works";
+      btn.style.backgroundColor = "#00D1FF";
+      btn.style.cursor = "pointer";
     }
-    
-    btn.textContent = "Connecting...";
-    
-    conversation = await window.ElevenLabsConvAI.Conversation.startSession({
-      agentId: "agent_4601khceyk26ebb9rbdrx4kvbn4b",
-      onConnect: () => {
-        alert("Connected!"); // If this pops up, it works!
-        btn.textContent = "Stop AI";
-      },
-      onDisconnect: () => {
-        btn.textContent = "Click to Speak";
-      },
-      onError: (err) => {
-        alert("Error: " + JSON.stringify(err));
+  }, 100);
+
+  btn.onclick = async () => {
+    if (!conv) {
+      try {
+        btn.textContent = "Connecting...";
+        conv = await window.ElevenLabsConvAI.Conversation.startSession({
+          agentId: "agent_4601khceyk26ebb9rbdrx4kvbn4b",
+          onConnect: () => {
+            btn.textContent = "End Session";
+            btn.style.backgroundColor = "#FF3B30";
+          },
+          onDisconnect: () => {
+            conv = null;
+            btn.textContent = "See how it works";
+            btn.style.backgroundColor = "#00D1FF";
+          }
+        });
+      } catch (e) {
+        btn.textContent = "Check Mic Access";
+        console.error(e);
       }
-    });
-  } catch (err) {
-    alert("Fatal Error: " + err.message);
-  }
-};
+    } else {
+      await conv.endSession();
+    }
+  };
+</script>
