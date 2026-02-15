@@ -1,24 +1,22 @@
 ---
 layout: post
-title:  "Voice AI"
+title:  "Voice AI Integration"
 date:   2026-02-15
 category: System Design
-tags: system_design
+tags: [ai, system_design]
 ---
 
-## Voice AI Interactive Demo
-
 <div style="margin: 40px 0; text-align: center;">
-    <button id="test-voice-btn" style="
+    <button id="ai-voice-btn" disabled style="
         background-color: #333; 
         color: #ffffff; 
         border: none; 
         padding: 20px 40px; 
         font-size: 1.2rem; 
         font-weight: 600; 
-        border-radius: 8px; 
-        cursor: wait; 
-        transition: all 0.3s ease;
+        border-radius: 12px; 
+        cursor: not-allowed; 
+        opacity: 0.6;
     ">
         Initializing Engine...
     </button>
@@ -28,32 +26,29 @@ tags: system_design
 
 <script>
   (function() {
-    const btn = document.getElementById('test-voice-btn');
+    const btn = document.getElementById('ai-voice-btn');
     let conversation;
 
-    // 2. This checks for the SDK every 100ms
-    const timer = setInterval(() => {
+    // This loop prevents the "undefined" error by waiting for the SDK
+    const checkSDK = setInterval(() => {
       if (window.ElevenLabsConvAI) {
-        clearInterval(timer);
+        clearInterval(checkSDK);
+        btn.disabled = false;
         btn.textContent = "Click to Speak with AI";
         btn.style.backgroundColor = "#00D1FF";
         btn.style.cursor = "pointer";
-        console.log("SDK Ready");
+        btn.style.opacity = "1";
       }
     }, 100);
 
     btn.onclick = async () => {
-      if (!window.ElevenLabsConvAI) return;
-
       if (!conversation) {
         try {
           btn.textContent = "Connecting...";
-          
-          // 3. Start the actual session
           conversation = await window.ElevenLabsConvAI.Conversation.startSession({
             agentId: "agent_4601khceyk26ebb9rbdrx4kvbn4b",
             onConnect: () => {
-              btn.textContent = "Stop AI";
+              btn.textContent = "Stop AI Session";
               btn.style.backgroundColor = "#FF3B30";
             },
             onDisconnect: () => {
@@ -63,8 +58,8 @@ tags: system_design
             }
           });
         } catch (err) {
-          console.error(err);
-          btn.textContent = "Mic Error - Check Settings";
+          console.error("Session Error:", err);
+          btn.textContent = "Check Allowlist Settings";
         }
       } else {
         await conversation.endSession();
