@@ -1,60 +1,93 @@
 ---
 layout: post
-title:  "Voice AI"
+title:  "Voice AI Integration Test"
 date:   2026-02-15
 category: System Design
-tags: system_design
+tags: [ai, voice, system_design]
 ---
 
+## Voice AI Interactive Demo
+
+This post demonstrates a professional, unbranded integration of the ElevenLabs Conversational AI Agents. By using the official SDK instead of the standard widget, we maintain full control over the UI/UX.
+
+<script src="https://unpkg.com/@elevenlabs/convai-sdk@latest/dist/index.bundle.js"></script>
+
 <div style="margin: 40px 0; text-align: center;">
-    <button id="test-voice-btn" style="
-        background-color: #00D1FF; 
+    <button id="ai-voice-btn" disabled style="
+        background-color: #cccccc; 
         color: #ffffff; 
         border: none; 
         padding: 20px 40px; 
         font-size: 1.2rem; 
         font-weight: 600; 
-        border-radius: 8px; 
-        cursor: pointer;
+        border-radius: 12px; 
+        cursor: not-allowed; 
+        transition: all 0.3s ease;
+        box-shadow: 0 4px 14px rgba(0, 0, 0, 0.1);
     ">
-        Click to Speak with AI
+        Initializing Engine...
     </button>
 </div>
 
-<script src="https://unpkg.com/@elevenlabs/convai-widget-embed" async type="text/javascript"></script>
-
 <script>
-  const btn = document.getElementById('test-voice-btn');
-  let conversation;
+  (function() {
+    const btn = document.getElementById('ai-voice-btn');
+    let conversation;
 
-  btn.onclick = async () => {
-    // The widget script exposes the SDK via 'ElevenLabsConvAI'
-    if (typeof ElevenLabsConvAI === 'undefined') {
-        alert("Voice engine is still loading. Please wait 2 seconds.");
-        return;
-    }
-
-    if (!conversation) {
-      try {
-        btn.textContent = "Connecting...";
-        conversation = await ElevenLabsConvAI.Conversation.startSession({
-          agentId: "agent_4601khceyk26ebb9rbdrx4kvbn4b",
-          onConnect: () => {
-            btn.textContent = "End Session";
-            btn.style.backgroundColor = "#FF3B30";
-          },
-          onDisconnect: () => {
-            conversation = null;
-            btn.textContent = "Click to Speak with AI";
-            btn.style.backgroundColor = "#00D1FF";
-          }
-        });
-      } catch (err) {
-        console.error(err);
-        btn.textContent = "Check Console";
+    // 3. Polling check to ensure SDK is loaded before enabling the button
+    const checkSDK = setInterval(() => {
+      if (window.ElevenLabsConvAI) {
+        clearInterval(checkSDK);
+        btn.disabled = false;
+        btn.textContent = "Click to Speak with AI";
+        btn.style.backgroundColor = "#00D1FF";
+        btn.style.cursor = "pointer";
+        btn.style.boxShadow = "0 4px 14px rgba(0, 209, 255, 0.3)";
+        console.log("ElevenLabs SDK Loaded successfully.");
       }
-    } else {
-      await conversation.endSession();
-    }
-  };
+    }, 100);
+
+    btn.onclick = async () => {
+      // 4. Session Logic
+      if (!conversation) {
+        try {
+          btn.textContent = "Connecting...";
+          btn.style.backgroundColor = "#666";
+          
+          conversation = await window.ElevenLabsConvAI.Conversation.startSession({
+            agentId: "agent_4601khceyk26ebb9rbdrx4kvbn4b",
+            onConnect: () => {
+              btn.textContent = "Stop AI Session";
+              btn.style.backgroundColor = "#FF3B30";
+              console.log("Connected to AI Agent.");
+            },
+            onDisconnect: () => {
+              conversation = null;
+              btn.textContent = "Click to Speak with AI";
+              btn.style.backgroundColor = "#00D1FF";
+              console.log("Disconnected.");
+            },
+            onError: (err) => {
+              console.error("Conversation Error:", err);
+              btn.textContent = "Error: Check Console";
+            }
+          });
+        } catch (err) {
+          console.error("Failed to start session:", err);
+          btn.textContent = "Connection Failed";
+        }
+      } else {
+        await conversation.endSession(); // Manually end the session
+      }
+    };
+  })();
 </script>
+
+---
+
+### Technical Breakdown
+This implementation utilizes the **ElevenLabs Conversational AI SDK** to establish a real-time WebSocket connection. 
+
+* **SDK vs Widget**: By opting for the SDK over the `<elevenlabs-convai>` widget, we bypass the "Powered by ElevenLabs" branding and the default speech-bubble UI.
+* **Security**: The domain `michaljanczyk.com` must be whitelisted in the ElevenLabs dashboard to allow the Origin header.
+* **Permissions**: The browser will request microphone access immediately upon the first `startSession` call.
