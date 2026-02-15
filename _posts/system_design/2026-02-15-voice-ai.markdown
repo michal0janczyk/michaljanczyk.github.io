@@ -6,26 +6,21 @@ category: System Design
 tags: system_design
 ---
 
-## Voice AI Interactive Demo
-
-Below is a live test of the ElevenLabs Conversational AI Agent. This integration uses the web SDK to provide a low-latency, unbranded voice experience.
-
 <script src="https://unpkg.com/@elevenlabs/convai-sdk" type="text/javascript"></script>
 
 <div style="margin: 40px 0; text-align: center;">
-    <button id="test-voice-btn" style="
-        background-color: #00D1FF; 
+    <button id="test-voice-btn" disabled style="
+        background-color: #cccccc; 
         color: #ffffff; 
         border: none; 
         padding: 20px 40px; 
         font-size: 1.2rem; 
         font-weight: 600; 
         border-radius: 8px; 
-        cursor: pointer; 
+        cursor: not-allowed; 
         transition: all 0.3s ease;
-        box-shadow: 0 4px 14px rgba(0, 209, 255, 0.3);
     ">
-        Click to Speak with AI
+        Loading Voice Engine...
     </button>
 </div>
 
@@ -33,44 +28,41 @@ Below is a live test of the ElevenLabs Conversational AI Agent. This integration
   const btn = document.getElementById('test-voice-btn');
   let conversation;
 
+  // Wait for the SDK to be available globally
+  const checkSDK = setInterval(() => {
+    if (window.ElevenLabsConvAI) {
+      clearInterval(checkSDK);
+      btn.disabled = false;
+      btn.textContent = "Click to Speak with AI";
+      btn.style.backgroundColor = "#00D1FF";
+      btn.style.cursor = "pointer";
+      btn.style.boxShadow = "0 4px 14px rgba(0, 209, 255, 0.3)";
+    }
+  }, 100);
+
   btn.onclick = async () => {
     if (!conversation) {
       try {
         btn.textContent = "Connecting...";
-        btn.style.backgroundColor = "#666";
         
         conversation = await window.ElevenLabsConvAI.Conversation.startSession({
           agentId: "agent_4601khceyk26ebb9rbdrx4kvbn4b",
           onConnect: () => {
             btn.textContent = "End Conversation";
             btn.style.backgroundColor = "#FF3B30";
-            console.log("Connected to ElevenLabs");
           },
           onDisconnect: () => {
             conversation = null;
             btn.textContent = "Click to Speak with AI";
             btn.style.backgroundColor = "#00D1FF";
-            console.log("Disconnected");
           }
         });
       } catch (err) {
         console.error("Connection Error:", err);
-        btn.textContent = "Error: Check Console";
-        btn.style.backgroundColor = "#333";
+        btn.textContent = "Error: Check Allowlist";
       }
     } else {
       await conversation.endSession();
     }
   };
 </script>
-
-### Technical Implementation Details
-This test verifies the **Frontend Pipeline** of our Dual-Pipeline architecture:
-* **SDK Initialization**: Ensures the `convai-sdk` loads correctly on a standard domain.
-* **Permission Handling**: Tests browser microphone request flow outside of a sandboxed iframe.
-* **Latency**: Provides a baseline for "Time to First Word" via the WebSocket connection.
-
----
-Additional materials:
-- [ElevenLabs SDK Documentation](https://elevenlabs.io/docs/conversational-ai/sdk)
-- [System Design: Real-time Audio Streaming](https://michaljanczyk.com/category/system-design)
