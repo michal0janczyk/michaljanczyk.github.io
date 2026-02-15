@@ -6,64 +6,30 @@ category: System Design
 tags: [ai, system_design]
 ---
 
-<div style="margin: 40px 0; text-align: center;">
-    <button id="ai-voice-btn" disabled style="
-        background-color: #333; 
-        color: #ffffff; 
-        border: none; 
-        padding: 20px 40px; 
-        font-size: 1.2rem; 
-        font-weight: 600; 
-        border-radius: 12px; 
-        cursor: not-allowed; 
-        opacity: 0.6;
-    ">
-        Initializing Engine...
-    </button>
-</div>
-
-<script src="https://unpkg.com/@elevenlabs/convai-sdk@latest/dist/index.bundle.js"></script>
-
-<script>
-  (function() {
-    const btn = document.getElementById('ai-voice-btn');
-    let conversation;
-
-    // This loop prevents the "undefined" error by waiting for the SDK
-    const checkSDK = setInterval(() => {
-      if (window.ElevenLabsConvAI) {
-        clearInterval(checkSDK);
-        btn.disabled = false;
-        btn.textContent = "Click to Speak with AI";
-        btn.style.backgroundColor = "#00D1FF";
-        btn.style.cursor = "pointer";
-        btn.style.opacity = "1";
+btn.onclick = async () => {
+  console.log("Button clicked..."); 
+  try {
+    if (!window.ElevenLabsConvAI) {
+      alert("SDK not loaded yet!");
+      return;
+    }
+    
+    btn.textContent = "Connecting...";
+    
+    conversation = await window.ElevenLabsConvAI.Conversation.startSession({
+      agentId: "agent_4601khceyk26ebb9rbdrx4kvbn4b",
+      onConnect: () => {
+        alert("Connected!"); // If this pops up, it works!
+        btn.textContent = "Stop AI";
+      },
+      onDisconnect: () => {
+        btn.textContent = "Click to Speak";
+      },
+      onError: (err) => {
+        alert("Error: " + JSON.stringify(err));
       }
-    }, 100);
-
-    btn.onclick = async () => {
-      if (!conversation) {
-        try {
-          btn.textContent = "Connecting...";
-          conversation = await window.ElevenLabsConvAI.Conversation.startSession({
-            agentId: "agent_4601khceyk26ebb9rbdrx4kvbn4b",
-            onConnect: () => {
-              btn.textContent = "Stop AI Session";
-              btn.style.backgroundColor = "#FF3B30";
-            },
-            onDisconnect: () => {
-              conversation = null;
-              btn.textContent = "Click to Speak with AI";
-              btn.style.backgroundColor = "#00D1FF";
-            }
-          });
-        } catch (err) {
-          console.error("Session Error:", err);
-          btn.textContent = "Check Allowlist Settings";
-        }
-      } else {
-        await conversation.endSession();
-      }
-    };
-  })();
-</script>
+    });
+  } catch (err) {
+    alert("Fatal Error: " + err.message);
+  }
+};
